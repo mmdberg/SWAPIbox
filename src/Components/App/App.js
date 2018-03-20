@@ -4,7 +4,8 @@ import { Scroll } from '../Scroll/index'
 import { Favorites } from '../Favorites/index';
 import { ButtonContainer } from '../ButtonContainer/index';
 import { CardContainer } from '../CardContainer/index';
-import { openingCall } from '../../helpers/api'
+import { openingCall, buttonCall } from '../../helpers/api';
+import { openingCleaner } from '../../helpers/filmCleaner';
 import { peopleCleaner } from '../../helpers/peopleCleaner';
 
 class App extends Component {
@@ -17,22 +18,24 @@ class App extends Component {
   }
 
   getOpening = () => {
-    let randomMovie = Math.floor(Math.random() * 8)
-    fetch(`https://swapi.co/api/films/${randomMovie}/`)
-      .then(response => response.json())
-      .then(data => this.setState({
+    openingCall()
+    .then(data => this.setState({
         opening: openingCleaner(data)
       }))
-      .catch(error => console.log(error))
+    .catch(error => console.log(error))
   }
+
+  // getHomeworld(
+
+  //   )
 
   getCards = (userInput) => {
     console.log(userInput)
-    fetch(`https://swapi.co/api/${userInput}/`)
-      .then(response => response.json())
-      .then(data => this.setState({
+      buttonCall(userInput)
+      // .then(data => getHomeworld(data.results.homeworld))
+      .then(data => {this.setState({
         cards: peopleCleaner(data)
-      }))
+      })})
       .catch(error => console.log(error))
   }
 
