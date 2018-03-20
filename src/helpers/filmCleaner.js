@@ -1,4 +1,4 @@
-export const openingCleaner = (data) => {
+export const filmCleaner = (data) => {
   let cleanYear = (date) => {
     let releaseArray = date.split('-')
     let releaseYear = releaseArray[0] 

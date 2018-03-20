@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './styles.css'
 
-export class Card extends Component {
-  constructor(props){
-    super(props)
-  }
-
-  render() {
+export const Card = (props) => {
+  if (props.information.homeworld) {
     return (
       <div className='card'>
-        <h3>{this.props.name}</h3>
+        <h3>{props.information.name}</h3>
+        <p>{props.information.species}</p>
+        <p>{props.information.homeworld}</p>
+        <p>{props.information.homeworldPop}</p>
       </div>
-  )}
+      )
+    }
 }

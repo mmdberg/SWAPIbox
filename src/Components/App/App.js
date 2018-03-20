@@ -5,8 +5,8 @@ import { Favorites } from '../Favorites/index';
 import { ButtonContainer } from '../ButtonContainer/index';
 import { CardContainer } from '../CardContainer/index';
 import { openingCall, buttonCall } from '../../helpers/api';
-import { openingCleaner } from '../../helpers/filmCleaner';
-import { peopleCleaner } from '../../helpers/peopleCleaner';
+import { filmCleaner } from '../../helpers/filmCleaner';
+// import { peopleCleaner } from '../../helpers/peopleCleaner';
 
 class App extends Component {
   constructor(props) {
@@ -20,23 +20,18 @@ class App extends Component {
   getOpening = () => {
     openingCall()
     .then(data => this.setState({
-        opening: openingCleaner(data)
+        opening: filmCleaner(data)
       }))
     .catch(error => console.log(error))
   }
 
-  // getHomeworld(
-
-  //   )
-
   getCards = (userInput) => {
     console.log(userInput)
-      buttonCall(userInput)
-      // .then(data => getHomeworld(data.results.homeworld))
-      .then(data => {this.setState({
-        cards: peopleCleaner(data)
-      })})
-      .catch(error => console.log(error))
+    buttonCall(userInput)
+    .then(cards => this.setState({
+      cards
+    }))
+    .catch(error => console.log(error))
   }
 
   componentDidMount() {
@@ -52,7 +47,7 @@ class App extends Component {
         <Scroll opening={this.state.opening}/>
         <Favorites />
         <ButtonContainer getCards={this.getCards}/>
-        <CardContainer cards={this.state.cards}/>
+        <CardContainer cards={[]}/>
       </div>
     );
   }
