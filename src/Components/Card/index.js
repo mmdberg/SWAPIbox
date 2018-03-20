@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
+import './styles.css'
 
-export const Card = () => {
+export class Card extends Component {
+  constructor(props){
+    super(props)
+  }
 
-  return (
-    <div>
-      Card1
-    </div>
-  )
+  render() {
+    return (
+      <div className='card'>
+        <h3>{this.props.name}</h3>
+      </div>
+  )}
 }

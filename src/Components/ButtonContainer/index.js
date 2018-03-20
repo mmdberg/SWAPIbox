@@ -1,13 +1,13 @@
 import React from 'react';
 import { Button } from '../Button/index'
 
-export const ButtonContainer = () => {
+export const ButtonContainer = ({getCards}) => {
 
   return (
     <div className='button-container'>
-      <Button text='People'/>
-      <Button text='Planets'/>
-      <Button text='Vehicles'/>
+      <Button text='People' getCards={getCards}/>
+      <Button text='Planets' getCards={getCards}/>
+      <Button text='Vehicles' getCards={getCards}/>
     </div>
   )
 }

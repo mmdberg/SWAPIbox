@@ -4,19 +4,21 @@ import { Scroll } from '../Scroll/index'
 import { Favorites } from '../Favorites/index';
 import { ButtonContainer } from '../ButtonContainer/index';
 import { CardContainer } from '../CardContainer/index';
-import { openingCleaner } from '../../helpers/filmCleaner'
+import { openingCall } from '../../helpers/api'
+import { peopleCleaner } from '../../helpers/peopleCleaner';
 
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      opening: ''
+      opening: {},
+      cards: []
     }
   }
 
   getOpening = () => {
-    console.log('hey')
-    fetch('https://swapi.co/api/films/1/')
+    let randomMovie = Math.floor(Math.random() * 8)
+    fetch(`https://swapi.co/api/films/${randomMovie}/`)
       .then(response => response.json())
       .then(data => this.setState({
         opening: openingCleaner(data)
@@ -24,12 +26,18 @@ class App extends Component {
       .catch(error => console.log(error))
   }
 
-  getCards = () => {
-    
+  getCards = (userInput) => {
+    console.log(userInput)
+    fetch(`https://swapi.co/api/${userInput}/`)
+      .then(response => response.json())
+      .then(data => this.setState({
+        cards: peopleCleaner(data)
+      }))
+      .catch(error => console.log(error))
   }
 
   componentDidMount() {
-    this.getOpening()
+    this.getOpening();
   }
 
   render() {
@@ -38,10 +46,10 @@ class App extends Component {
         <header className='header'>
           <h1 className="logo">SWAPIbox</h1>
         </header>
-        <Scroll text={this.state.opening}/>
+        <Scroll opening={this.state.opening}/>
         <Favorites />
-        <ButtonContainer />
-        <CardContainer />
+        <ButtonContainer getCards={this.getCards}/>
+        <CardContainer cards={this.state.cards}/>
       </div>
     );
   }

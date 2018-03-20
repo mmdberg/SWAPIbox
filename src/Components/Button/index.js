@@ -1,7 +1,9 @@
 import React from 'react';
+import './styles.css'
 
-export const Button = ({text}) => {
+export const Button = ({text, getCards}) => {
+  const lowerCase = text.toLowerCase()
   return (
-    <button>{text}</button>
+    <button className='button' onClick={() => getCards(lowerCase)}>{text}</button>
   )
 }
