@@ -9,9 +9,18 @@ describe('App', () => {
     expect(wrapper).toBeDefined()
   })
 
+//snapshot of render
 
+//state start empty
 
+//getOpening method
+//opening state is updated with text, title and year on page load
+//if theres an error it updated error state(change this)
 
+//getCards
+//that its run with right parameter
+//that it set states with new card array
+//that it updates state with error(change this)
 
 
 })

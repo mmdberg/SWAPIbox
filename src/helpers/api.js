@@ -1,21 +1,20 @@
-// const SWroot = 'https://swapi.co/api/'
+const SWroot = 'https://swapi.co/api/'
 
 const getHomeworld = (PeopleData) => {
-  let promises = PeopleData.map(person => {
+  let promises = PeopleData.map(async character => {
 
-    return fetch(person.homeworld)
-      .then(response => response.json())
-      .then(data => ({...person, homeworld: data.name, homeworldPop: data.population}))
+    let response = await fetch(character.homeworld)
+    let people = await response.json()
+    return await ({...character, homeworld: people.name, homeworldPop: people.population})
     })
   return Promise.all(promises)
 }
 
 const getSpecies = (PeopleData) => {
-  let promises = PeopleData.map(person => {
-
-    return fetch(person.species[0])
-      .then(response => response.json())
-      .then(data => ({...person, species: data.name}))
+  let promises = PeopleData.map(async character => {
+    let response = await fetch(character.species[0])
+    let person = await response.json()
+    return await ({...character, species: person.name})
     })
   return Promise.all(promises)
 }
@@ -36,15 +35,14 @@ const cleanPeople = (PeopleData) => {
 }
 
 const getResidents = (PlanetData) => {
-  let planetPromises = PlanetData.map(planet => {
-    let residentPromises = planet.residents.map(residentURL => {
-      return fetch(residentURL)
-      .then(response => response.json())
-      .then(data => data.name)
-      
+  let planetPromises = PlanetData.map(async planet => {
+    let residentPromises = planet.residents.map(async residentURL => {
+      let response = await fetch(residentURL)
+      let resident = await response.json()
+      return await resident.name
     })
-    return Promise.all(residentPromises)
-    .then(data => ({...planet, residents: data}))
+    let residentsArr = await Promise.all(residentPromises)
+    return await ({...planet, residents: residentsArr})
   })
   return Promise.all(planetPromises)
 }
@@ -80,32 +78,24 @@ const cleanVehicles = (VehicleData) => {
   return cleanVehiclesList
 }
 
+export const buttonCall = async (input) => {
+  let response = await fetch(`${SWroot}${input}/`)
+  let data = await response.json()
 
-export const buttonCall = (input) => {
   if (input === 'people') {
-    return fetch('https://swapi.co/api/people/')
-      .then(response => response.json())
-      .then(data => getHomeworld(data.results))
-      .then(data => getSpecies(data))
-      .then(data => cleanPeople(data))
+    let homeworld = await getHomeworld(data.results)
+    let people = await getSpecies(homeworld)
+    return cleanPeople(people)
   } else if (input === 'planets') {
-    return fetch('https://swapi.co/api/planets/')
-      .then(response => response.json())
-      .then(data => getResidents(data.results))
-      .then(data => cleanPlanets(data))
+    let planets = await getResidents(data.results)
+    return cleanPlanets(planets)
   } else {
-    return fetch('https://swapi.co/api/vehicles/')
-      .then(response => response.json())
-      .then(data => cleanVehicles(data.results))
+    return cleanVehicles(data.results)
   }
-
 }
 
-export const openingCall = () => {
+export const openingCall = async () => {
   let randomMovie = Math.floor(Math.random() * 8)
-  return fetch(`https://swapi.co/api/films/${randomMovie}/`)
-        .then(response => response.json())
-
-  // console.log(openingObject)
-  // return openingObject
+  let response = await fetch(`${SWroot}films/${randomMovie}/`)
+  return await response.json()
 }
