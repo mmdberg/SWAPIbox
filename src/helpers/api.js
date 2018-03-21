@@ -37,12 +37,14 @@ const cleanPeople = (PeopleData) => {
 
 const getResidents = (PlanetData) => {
   let planetData = PlanetData.map(planet => {
-    let residentPromises = planet.residents.map(residentURL => {
-      return fetch(residentURL)
+    let residentPromises = planet.residents.reduce((residentArr, residentURL) => {
+      fetch(residentURL)
       .then(response => response.json())
       .then(data => data.name)
-    })
-    return ({...planet, residents: Promise.all(residentPromises)})
+      .then(name => residentArr.push(name))
+      return residentArr
+    }, [])
+    return ({...planet, residents: residentPromises})
   })
   return planetData
 }
@@ -63,6 +65,21 @@ const cleanPlanets = (PlanetData) => {
   return cleanPlanetsList
 }
 
+const cleanVehicles = (VehicleData) => {
+  let cleanVehiclesList = VehicleData.reduce((vehicleArray, vehicle) => {
+    let vehicleObject = Object.keys(vehicle).reduce((vehicleObj, characteristic) => {
+      vehicleObj.name = vehicle.name;
+      vehicleObj.model = vehicle.model;
+      vehicleObj.class = vehicle.vehicle_class;
+      vehicleObj.passengers = vehicle.passengers;
+      return vehicleObj
+    }, {})
+    vehicleArray.push(vehicleObject)
+    return vehicleArray
+  }, [])
+  return cleanVehiclesList
+}
+
 
 export const buttonCall = (input) => {
   if (input === 'people') {
@@ -71,12 +88,16 @@ export const buttonCall = (input) => {
       .then(data => getHomeworld(data.results))
       .then(data => getSpecies(data))
       .then(data => cleanPeople(data))
-    } else if (input === 'planets') {
+  } else if (input === 'planets') {
     return fetch('https://swapi.co/api/planets/')
       .then(response => response.json())
       .then(data => getResidents(data.results))
       .then(data => cleanPlanets(data))
-    }
+  } else {
+    return fetch('https://swapi.co/api/vehicles/')
+      .then(response => response.json())
+      .then(data => cleanVehicles(data.results))
+  }
 
 }
 

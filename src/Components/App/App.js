@@ -47,7 +47,7 @@ class App extends Component {
         <Scroll opening={this.state.opening}/>
         <Favorites />
         <ButtonContainer getCards={this.getCards}/>
-        <CardContainer cards={[]}/>
+        <CardContainer cards={this.state.cards}/>
       </div>
     );
   }

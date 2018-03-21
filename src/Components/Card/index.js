@@ -11,5 +11,23 @@ export const Card = (props) => {
         <p>{props.information.homeworldPop}</p>
       </div>
       )
+    } else if (props.information.terrain) {
+      return (
+        <div className='card'>
+          <h3>{props.information.name}</h3>
+          <p>{props.information.terrain}</p>
+          <p>{props.information.population}</p>
+          <p>{props.information.climate}</p>
+        </div>
+      )
+    } else {
+      return (
+        <div className='card'>
+          <h3>{props.information.name}</h3>
+          <p>{props.information.model}</p>
+          <p>{props.information.class}</p>
+          <p>{props.information.passengers}</p>
+        </div>
+      )
     }
 }
