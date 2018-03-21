@@ -1,0 +1,14 @@
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr)
+}
+
+.card {
+  border: 1px solid black;
+  margin: 10px;
+}
+
+.card h3 {
+  font-size: 1em;
+  border-bottom: 2px grey solid;
+}

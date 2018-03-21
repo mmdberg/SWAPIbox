@@ -4,32 +4,37 @@ import { Scroll } from '../Scroll/index'
 import { Favorites } from '../Favorites/index';
 import { ButtonContainer } from '../ButtonContainer/index';
 import { CardContainer } from '../CardContainer/index';
-import { openingCleaner } from '../../helpers/filmCleaner'
+import { openingCall, buttonCall } from '../../helpers/api';
+import { filmCleaner } from '../../helpers/filmCleaner';
+// import { peopleCleaner } from '../../helpers/peopleCleaner';
 
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      opening: ''
+      opening: {},
+      cards: []
     }
   }
 
   getOpening = () => {
-    console.log('hey')
-    fetch('https://swapi.co/api/films/1/')
-      .then(response => response.json())
-      .then(data => this.setState({
-        opening: openingCleaner(data)
+    openingCall()
+    .then(data => this.setState({
+        opening: filmCleaner(data)
       }))
-      .catch(error => console.log(error))
+    .catch(error => console.log(error))
   }
 
-  getCards = () => {
-    
+  getCards = (userInput) => {
+    buttonCall(userInput)
+    .then(cards => this.setState({
+      cards
+    }))
+    .catch(error => console.log(error))
   }
 
   componentDidMount() {
-    this.getOpening()
+    this.getOpening();
   }
 
   render() {
@@ -38,10 +43,10 @@ class App extends Component {
         <header className='header'>
           <h1 className="logo">SWAPIbox</h1>
         </header>
-        <Scroll text={this.state.opening}/>
+        <Scroll opening={this.state.opening}/>
         <Favorites />
-        <ButtonContainer />
-        <CardContainer />
+        <ButtonContainer getCards={this.getCards}/>
+        <CardContainer cards={this.state.cards}/>
       </div>
     );
   }

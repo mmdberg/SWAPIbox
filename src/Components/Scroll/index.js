@@ -1,13 +1,15 @@
 import React from 'react';
 import './styles.css';
 
-export const Scroll = ({text}) => {
+export const Scroll = ({opening}) => {
 
   return (
     <div className='scroll'>
-      <p className='scroll-text'>
-        {text}
-      </p>
+      <div className='scroll-text'>
+        <p>{opening.text}</p>
+        <h3>{opening.title}</h3>
+        <h3>{opening.releaseYear}</h3>
+      </div>
     </div>
   )
 }
