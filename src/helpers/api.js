@@ -36,17 +36,17 @@ const cleanPeople = (PeopleData) => {
 }
 
 const getResidents = (PlanetData) => {
-  let planetData = PlanetData.map(planet => {
-    let residentPromises = planet.residents.reduce((residentArr, residentURL) => {
-      fetch(residentURL)
+  let planetPromises = PlanetData.map(planet => {
+    let residentPromises = planet.residents.map(residentURL => {
+      return fetch(residentURL)
       .then(response => response.json())
       .then(data => data.name)
-      .then(name => residentArr.push(name))
-      return residentArr
-    }, [])
-    return ({...planet, residents: residentPromises})
+      
+    })
+    return Promise.all(residentPromises)
+    .then(data => ({...planet, residents: data}))
   })
-  return planetData
+  return Promise.all(planetPromises)
 }
 
 const cleanPlanets = (PlanetData) => {

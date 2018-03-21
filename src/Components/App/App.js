@@ -26,7 +26,6 @@ class App extends Component {
   }
 
   getCards = (userInput) => {
-    console.log(userInput)
     buttonCall(userInput)
     .then(cards => this.setState({
       cards

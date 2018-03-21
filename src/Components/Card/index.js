@@ -12,12 +12,17 @@ export const Card = (props) => {
       </div>
       )
     } else if (props.information.terrain) {
+      let residents = props.information.residents.map((resident, index) =>  <p key={index}>{resident}</p>)
       return (
         <div className='card'>
           <h3>{props.information.name}</h3>
           <p>{props.information.terrain}</p>
           <p>{props.information.population}</p>
           <p>{props.information.climate}</p>
+          <div>
+            <p>Residents: </p>
+            {residents}
+          </div>
         </div>
       )
     } else {
