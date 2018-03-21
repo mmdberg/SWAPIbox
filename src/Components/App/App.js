@@ -4,33 +4,30 @@ import { Scroll } from '../Scroll/index'
 import { Favorites } from '../Favorites/index';
 import { ButtonContainer } from '../ButtonContainer/index';
 import { CardContainer } from '../CardContainer/index';
-import { openingCall, buttonCall } from '../../helpers/api';
-import { filmCleaner } from '../../helpers/filmCleaner';
-// import { peopleCleaner } from '../../helpers/peopleCleaner';
 
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
       opening: {},
-      cards: []
+      cards: [],
+      errorStatus: ''
     }
   }
 
-  getOpening = () => {
-    openingCall()
-    .then(data => this.setState({
-        opening: filmCleaner(data)
-      }))
-    .catch(error => console.log(error))
+  getOpening = async () => {
+    try { let opening = await this.props.openingCall()
+    this.setState({ opening }) } catch (err) {
+      this.setState({errorStatus: 'Error loading data'})
+    }
   }
 
-  getCards = (userInput) => {
-    buttonCall(userInput)
-    .then(cards => this.setState({
-      cards
-    }))
-    .catch(error => console.log(error))
+  getCards = async (userInput) => {
+    try { let cards = await this.props.buttonCall(userInput)
+     this.setState({ cards }) 
+    } catch (err) {
+      this.setState({errorStatus: 'Error loading data'})
+     }
   }
 
   componentDidMount() {

@@ -1,11 +1,12 @@
-const SWroot = 'https://swapi.co/api/'
+const SWroot = 'https://swapi.co/api/';
 
 const getHomeworld = (PeopleData) => {
   let promises = PeopleData.map(async character => {
 
-    let response = await fetch(character.homeworld)
-    let people = await response.json()
-    return await ({...character, homeworld: people.name, homeworldPop: people.population})
+    let response = await fetch(character.homeworld);
+    let people = await response.json();
+    return await ({...character, homeworld: people.name, 
+      homeworldPop: people.population})
     })
   return Promise.all(promises)
 }
@@ -94,8 +95,22 @@ export const buttonCall = async (input) => {
   }
 }
 
+const cleanYear = (date) => {
+    let releaseArray = date.split('-')
+    return releaseArray[0] 
+  }
+
+const filmCleaner = (data) => {
+  return {
+    text: data.opening_crawl,
+    title: data.title,
+    releaseYear: cleanYear(data.release_date)
+  }
+}
+
 export const openingCall = async () => {
   let randomMovie = Math.floor(Math.random() * 8)
   let response = await fetch(`${SWroot}films/${randomMovie}/`)
-  return await response.json()
+  let movie = await response.json()
+  return filmCleaner(movie)
 }

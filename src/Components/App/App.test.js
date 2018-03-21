@@ -1,26 +1,84 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import App from './App';
 import { shallow } from 'enzyme';
 
 describe('App', () => {
-  it('renders without crashing', () => {
+
+
+  it.skip('matches the snapshot', () => {
     let wrapper = shallow(<App />)
-    expect(wrapper).toBeDefined()
+    expect(wrapper).toMatchSnapshot()
   })
 
-//snapshot of render
+  it('should start with empty states', () => {
+    let wrapper = shallow(<App />, {disableLifecycleMethods: true})
+    let expectedState = {
+      opening: {},
+      cards: [],
+      errorStatus: ''
+    }
+    
+    expect(wrapper.state()).toEqual(expectedState)
+  })
 
-//state start empty
+  it('getOpening should update opening state with text, title and year of film', async () => {
+    let expectedOpening = {
+      text: "It is a period of civil war. Rebel spaceships.",
+      title: "A New Hope",
+      releaseYear: "1977"
+    } 
+    let mockOpeningCall = jest.fn().mockImplementation(() => {
+      return expectedOpening
+    })
+    let wrapper = shallow(<App openingCall={mockOpeningCall}/>)
 
-//getOpening method
-//opening state is updated with text, title and year on page load
-//if theres an error it updated error state(change this)
+    await wrapper.instance().getOpening()
+    expect(wrapper.state('opening')).toEqual(expectedOpening)
 
-//getCards
-//that its run with right parameter
-//that it set states with new card array
-//that it updates state with error(change this)
+  })
+
+  it('getOpening should set error state on error', async () => {
+    let wrapper = shallow(<App />)
+
+    window.fetch = jest.fn().mockImplementation(() => {Promise.reject(
+      status: 404
+    )})
+    const expected = 'Error loading data'
+
+    await wrapper.instance().getOpening()
+    expect(wrapper.state('errorStatus')).toEqual(expected)
+  })
+
+  it('getCards should update cards state', async () => {
+    let expected = {
+      class: "wheeled",
+      model: "Digger Crawler",
+      name: "Sand Crawler",
+      passengers: "30"
+    }
+    let mockButtonCall = jest.fn().mockImplementation(() => {
+      return expected
+    })
+    let wrapper = shallow(<App buttonCall={mockButtonCall}/>)
+
+    await wrapper.instance().getCards('vehicles')
+    expect(wrapper.state('cards')).toEqual(expected)
+
+  })
+
+  it('getCards should set error state on error', async () => {
+    let wrapper = shallow(<App />)
+
+    window.fetch = jest.fn().mockImplementation(() => {Promise.reject(
+      status: 404
+    )})
+
+    const expected = 'Error loading data'
+
+    await wrapper.instance().getCards('vehicles')
+    expect(wrapper.state('errorStatus')).toEqual(expected)
+
+  })
 
 
 })
