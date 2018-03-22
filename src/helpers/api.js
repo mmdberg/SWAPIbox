@@ -108,9 +108,15 @@ const filmCleaner = (data) => {
   }
 }
 
-export const openingCall = async () => {
-  let randomMovie = Math.floor(Math.random() * 8)
-  let response = await fetch(`${SWroot}films/${randomMovie}/`)
+export const openingCall = async (number) => {
+  let response = await fetch(`${SWroot}films/${number}/`)
   let movie = await response.json()
   return filmCleaner(movie)
+}
+
+export default {
+  cleanYear,
+  filmCleaner,
+  openingCall,
+  buttonCall
 }

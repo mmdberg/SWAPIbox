@@ -16,7 +16,8 @@ class App extends Component {
   }
 
   getOpening = async () => {
-    try { let opening = await this.props.openingCall()
+    let randomMovie = Math.floor(Math.random() * 8)
+    try { let opening = await this.props.openingCall(randomMovie)
     this.setState({ opening }) } catch (err) {
       this.setState({errorStatus: 'Error loading data'})
     }
