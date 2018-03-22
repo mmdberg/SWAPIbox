@@ -4,6 +4,7 @@ import { Scroll } from '../Scroll/index';
 import { Favorites } from '../Favorites/index';
 import { ButtonContainer } from '../ButtonContainer/index';
 import { CardContainer } from '../CardContainer/index';
+import { Route, Link } from 'react-router-dom'
 
 class App extends Component {
   constructor(props) {
@@ -39,19 +40,32 @@ class App extends Component {
   }
 
   componentDidMount() {
-    // this.getOpening();
+    this.getOpening();
   }
 
   render() {
     return (
       <div className="App">
         <header className='header'>
-          <h1 className="logo">SWAPIbox</h1>
+          <Link to='/'>
+            <h1 className="logo">SWAPIbox</h1>
+          </Link>
         </header>
-        <Scroll opening={this.state.opening}/>
-        <Favorites />
-        <ButtonContainer getCards={this.getCards}/>
-        <CardContainer cards={this.state.cards}/>
+        <Route exact path='/' render={(() => {
+          return(
+            <Scroll opening={this.state.opening}/>
+          )
+        } )} />
+        <Route exact path='/favorites' component={ Favorites } />
+        <Route path='/home/' render={() => {
+          return (
+          <main>
+            <ButtonContainer getCards={this.getCards}/>
+            <CardContainer cards={this.state.cards}/>
+          </main>
+          )
+        }} />
+
       </div>
     );
   }
