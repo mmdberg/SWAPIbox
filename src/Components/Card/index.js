@@ -3,7 +3,7 @@ import './styles.css';
 
 export const Card = (props) => {
   const addActive = (event) => {
-    event.target.closest('div').classList.toggle('active');
+    event.target.closest('div').classList.toggle('favorite');
   };
 
   if (props.information.homeworld) {

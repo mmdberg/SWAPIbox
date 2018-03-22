@@ -1,0 +1,17 @@
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.button {
+  height: 50px;
+  width: 100px;
+  color: white;
+  background-color: black;
+  text-align: center
+}
+
+.active {
+  background-color: aqua;
+}
