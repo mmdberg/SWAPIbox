@@ -1,11 +1,10 @@
 import React from 'react';
-import './styles.css'
+import './styles.css';
 
 export const Card = (props) => {
   const addActive = (event) => {
-    (console.log(event.target.closest('div')))
-    event.target.closest('div').classList.toggle('active')
-  }
+    event.target.closest('div').classList.toggle('active');
+  };
 
   if (props.information.homeworld) {
     return (
@@ -15,29 +14,30 @@ export const Card = (props) => {
         <p>{props.information.homeworld}</p>
         <p>{props.information.homeworldPop}</p>
       </div>
-      )
-    } else if (props.information.terrain) {
-      let residents = props.information.residents.map((resident, index) =>  <p key={index}>{resident}</p>)
-      return (
-        <div className='card' onClick={(event) => (addActive(event))}>
-          <h3>{props.information.name}</h3>
-          <p>{props.information.terrain}</p>
-          <p>{props.information.population}</p>
-          <p>{props.information.climate}</p>
-          <section>
-            <p>Residents: </p>
-            {residents}
-          </section>
-        </div>
-      )
-    } else {
-      return (
-        <div className='card' onClick={(event) => (addActive(event))}>
-          <h3>{props.information.name}</h3>
-          <p>{props.information.model}</p>
-          <p>{props.information.class}</p>
-          <p>{props.information.passengers}</p>
-        </div>
-      )
-    }
-}
+    );
+  } else if (props.information.terrain) {
+    let residents = props.information.residents.map((resident, index) =>  
+      <p key={index}>{resident}</p>);
+    return (
+      <div className='card' onClick={(event) => (addActive(event))}>
+        <h3>{props.information.name}</h3>
+        <p>{props.information.terrain}</p>
+        <p>{props.information.population}</p>
+        <p>{props.information.climate}</p>
+        <section>
+          <p>Residents:</p>
+          {residents}
+        </section>
+      </div>
+    );
+  } else {
+    return (
+      <div className='card' onClick={(event) => (addActive(event))}>
+        <h3>{props.information.name}</h3>
+        <p>{props.information.model}</p>
+        <p>{props.information.class}</p>
+        <p>{props.information.passengers}</p>
+      </div>
+    );
+  }
+};

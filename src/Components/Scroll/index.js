@@ -11,5 +11,5 @@ export const Scroll = ({opening}) => {
         <h3>{opening.releaseYear}</h3>
       </div>
     </div>
-  )
-}
+  );
+};
