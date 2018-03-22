@@ -4,7 +4,7 @@ import { Scroll } from '../Scroll/index';
 import { Favorites } from '../Favorites/index';
 import { ButtonContainer } from '../ButtonContainer/index';
 import { CardContainer } from '../CardContainer/index';
-import { Route, Link } from 'react-router-dom'
+import { Route, Link, NavLink } from 'react-router-dom'
 
 class App extends Component {
   constructor(props) {
@@ -12,7 +12,8 @@ class App extends Component {
     this.state = {
       opening: {},
       cards: [],
-      errorStatus: ''
+      errorStatus: '',
+      favorites: []
     };
   }
 
@@ -39,6 +40,25 @@ class App extends Component {
     }
   }
 
+  addToFavorites = (card) => {
+    let favorites = [...this.state.favorites, card]
+    this.setState({
+      favorites
+    })
+
+
+
+  }
+
+  removeFromFavorites = (card) => {
+    console.log(card)
+    let allFavorites = [...this.state.favorites]
+    let favorites = allFavorites.filter(favorite => favorite.name !== card.name)
+    this.setState({
+      favorites
+    })
+  }
+
   componentDidMount() {
     this.getOpening();
   }
@@ -56,16 +76,23 @@ class App extends Component {
             <Scroll opening={this.state.opening}/>
           )
         } )} />
-        <Route exact path='/favorites' component={ Favorites } />
         <Route path='/home/' render={() => {
           return (
-          <main>
-            <ButtonContainer getCards={this.getCards}/>
-            <CardContainer cards={this.state.cards}/>
-          </main>
+            <main>
+              <NavLink to='/favorites' className='changeMain'>FAVORITES</NavLink>
+              <ButtonContainer getCards={this.getCards}/>
+              <CardContainer cards={this.state.cards} changeFavorites={this.addToFavorites}/>
+            </main>
           )
         }} />
-
+        <Route exact path='/favorites' render={() => {
+          return(
+            <main>
+              <NavLink to='/home/' className='changeMain'>BACK TO ALL CARDS</NavLink>
+              <CardContainer cards={this.state.favorites} changeFavorites={this.removeFromFavorites}/>
+            </main>
+          )
+          }} />
       </div>
     );
   }
