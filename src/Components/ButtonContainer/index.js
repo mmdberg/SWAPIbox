@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from '../Button/index'
+import { Button } from '../Button/index';
 
 export const ButtonContainer = ({getCards}) => {
 
@@ -9,5 +9,5 @@ export const ButtonContainer = ({getCards}) => {
       <Button text='Planets' getCards={getCards}/>
       <Button text='Vehicles' getCards={getCards}/>
     </div>
-  )
-}
+  );
+};

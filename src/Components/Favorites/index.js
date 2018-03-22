@@ -5,5 +5,5 @@ export const Favorites = (props) => {
     <div className='favorites'>
       Favorites Box
     </div>
-  )
-}
+  );
+};

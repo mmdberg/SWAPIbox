@@ -12,3 +12,7 @@
   font-size: 1em;
   border-bottom: 2px grey solid;
 }
+
+.active {
+  background-color: magenta
+}
