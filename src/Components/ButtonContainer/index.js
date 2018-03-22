@@ -1,13 +1,9 @@
 import React from 'react';
 import {Route, NavLink} from 'react-router-dom';
-import './styles.css'
+import './styles.css';
 
 export const ButtonContainer = ({getCards}) => {
-  // const categories = ['people', 'planets', 'vehicles']
-  // const NavLinks = categories.map((category, index) => {
-  //   return <NavLink to={category} key={index} onClick={() => 
-  //     getCards(category)}>{category.toUpperCase()}</NavLink>
-  //  })
+
   return (
     <div className="button-container">
       <NavLink to='/home/people/' className='button' onClick={() => 
@@ -19,3 +15,11 @@ export const ButtonContainer = ({getCards}) => {
     </div>
   );
 };
+
+
+
+  // const categories = ['people', 'planets', 'vehicles']
+  // const NavLinks = categories.map((category, index) => {
+  //   return <NavLink to={category} key={index} onClick={() => 
+  //     getCards(category)}>{category.toUpperCase()}</NavLink>
+  //  })

@@ -4,7 +4,7 @@ import { Scroll } from '../Scroll/index';
 import { Favorites } from '../Favorites/index';
 import { ButtonContainer } from '../ButtonContainer/index';
 import { CardContainer } from '../CardContainer/index';
-import { Route, Link, NavLink } from 'react-router-dom'
+import { Route, Link, NavLink } from 'react-router-dom';
 
 class App extends Component {
   constructor(props) {
@@ -40,8 +40,16 @@ class App extends Component {
     }
   }
 
-  addToFavorites = (card) => {
-    let favorites = [...this.state.favorites, card]
+  handleFavorites = (card) => {
+    let oldFavorites = [...this.state.favorites]
+    let checkMatch = oldFavorites.filter(favorite => favorite.name === card.name)
+    
+    if (checkMatch.length > 0) {
+      var favorites = oldFavorites.filter(favorite => favorite.name !== card.name)
+    } else {
+      var favorites = [...this.state.favorites, card]
+    }
+
     this.setState({
       favorites
     })
@@ -50,14 +58,14 @@ class App extends Component {
 
   }
 
-  removeFromFavorites = (card) => {
-    console.log(card)
-    let allFavorites = [...this.state.favorites]
-    let favorites = allFavorites.filter(favorite => favorite.name !== card.name)
-    this.setState({
-      favorites
-    })
-  }
+  // removeFromFavorites = (card) => {
+  //   console.log(card)
+  //   let allFavorites = [...this.state.favorites]
+  //   let favorites = allFavorites.filter(favorite => favorite.name !== card.name)
+  //   this.setState({
+  //     favorites
+  //   })
+  // }
 
   componentDidMount() {
     this.getOpening();
@@ -81,7 +89,7 @@ class App extends Component {
             <main>
               <NavLink to='/favorites' className='changeMain'>FAVORITES</NavLink>
               <ButtonContainer getCards={this.getCards}/>
-              <CardContainer cards={this.state.cards} changeFavorites={this.addToFavorites}/>
+              <CardContainer cards={this.state.cards} changeFavorites={this.handleFavorites}/>
             </main>
           )
         }} />
@@ -89,7 +97,7 @@ class App extends Component {
           return(
             <main>
               <NavLink to='/home/' className='changeMain'>BACK TO ALL CARDS</NavLink>
-              <CardContainer cards={this.state.favorites} changeFavorites={this.removeFromFavorites}/>
+              <CardContainer cards={this.state.favorites} changeFavorites={this.handleFavorites}/>
             </main>
           )
           }} />

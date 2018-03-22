@@ -3,8 +3,6 @@ import './styles.css';
 
 export const Card = (props) => {
 
-
-
   if (props.information.homeworld) {
     return (
       <div className='card' onClick={() => (props.changeFavorites(props.information))}>
