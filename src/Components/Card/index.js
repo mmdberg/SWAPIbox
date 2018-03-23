@@ -12,25 +12,26 @@ export const Card = (props) => {
       <div className={props.className} onClick={(event) => 
       { (props.changeFavorites(props.information)); addActive(event) }}>;
         <h3>{props.information.name}</h3>
-        <p>{props.information.species}</p>
-        <p>{props.information.homeworld}</p>
-        <p>{props.information.homeworldPop}</p>
+        <ul>
+          <li>Species: {props.information.species}</li>
+          <li>Homeworld: {props.information.homeworld}</li>
+          <li>{props.information.homeworldPop}</li>
+        </ul>
       </div>
     );
   } else if (props.information.terrain) {
     let residents = props.information.residents.map((resident, index) =>  
-      <p key={index}>{resident}</p>);
+      <li key={index}>{resident}</li>);
     return (
       <div className={props.className} onClick={(event) => 
       {(props.changeFavorites(props.information)); addActive(event)}}>;
         <h3>{props.information.name}</h3>
-        <p>{props.information.terrain}</p>
-        <p>{props.information.population}</p>
-        <p>{props.information.climate}</p>
-        <section>
-          <p>Residents:</p>
-          {residents}
-        </section>
+        <ul>
+          <li>Terrain: {props.information.terrain}</li>
+          <li>Population: {props.information.population}</li>
+          <li>Climate: {props.information.climate}</li>
+          <li>Residents:<ul>{residents}</ul> </li>
+        </ul>
       </div>
     );
   } else {
@@ -38,9 +39,11 @@ export const Card = (props) => {
       <div className={props.className} onClick={(event) => 
       {(props.changeFavorites(props.information)); addActive(event)}}>;
         <h3>{props.information.name}</h3>
-        <p>{props.information.model}</p>
-        <p>{props.information.class}</p>
-        <p>{props.information.passengers}</p>
+        <ul>
+          <li>Model: {props.information.model}</li>
+          <li>Class: {props.information.class}</li>
+          <li>Passengers: {props.information.passengers}</li>
+        </ul>
       </div>
     );
   }

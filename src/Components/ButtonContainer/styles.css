@@ -23,3 +23,10 @@
 .active {
   background-color: aqua;
 }
+
+@media screen and (min-width: 700px) {
+.button-container {
+  margin: 0 150px;
+}
+
+}

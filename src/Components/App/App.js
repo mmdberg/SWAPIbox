@@ -78,7 +78,7 @@ class App extends Component {
           return (
             <main>
               <NavLink to='/favorites' className='changeMain'>
-                FAVORITES 
+                FAVORITES:  
                 {this.state.favorites.length ? 
                   this.state.favorites.length : 
                   '(Zero Saved)'}

@@ -1,8 +1,5 @@
 .App {
-/*  text-align: center;*/
-/*  display: grid;
-  grid-template-rows: 100px 200px 300px;
-  grid-template-columns: 25% 65% 10%; */
+
 }
 
 .header {
@@ -21,12 +18,14 @@
 
 main {
   position: relative;
+  background-color: black;
+  height: 600px;
 }
 
 .changeMain {
   position: absolute;
-  right: 0;
-  top: -160px;
+  right: 20px;
+  top: -95px;
   color: white;
 }
 
