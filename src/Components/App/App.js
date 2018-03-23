@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Scroll } from '../Scroll/index';
-import { Favorites } from '../Favorites/index';
+// import { Favorites } from '../Favorites/index';
 import { ButtonContainer } from '../ButtonContainer/index';
 import { CardContainer } from '../CardContainer/index';
 import { Route, Link, NavLink } from 'react-router-dom';
@@ -43,7 +43,7 @@ class App extends Component {
   handleFavorites = (card) => {
     let oldFavorites = [...this.state.favorites]
     let checkMatch = oldFavorites.filter(favorite => favorite.name === card.name)
-    
+
     if (checkMatch.length > 0) {
       var favorites = oldFavorites.filter(favorite => favorite.name !== card.name)
     } else {
@@ -53,19 +53,7 @@ class App extends Component {
     this.setState({
       favorites
     })
-
-
-
   }
-
-  // removeFromFavorites = (card) => {
-  //   console.log(card)
-  //   let allFavorites = [...this.state.favorites]
-  //   let favorites = allFavorites.filter(favorite => favorite.name !== card.name)
-  //   this.setState({
-  //     favorites
-  //   })
-  // }
 
   componentDidMount() {
     this.getOpening();
