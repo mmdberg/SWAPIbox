@@ -49,7 +49,7 @@ class App extends Component {
       var favorites = 
       oldFavorites.filter(favorite => favorite.name !== card.name);
     } else {
-      var favorites = [...this.state.favorites, card];
+      favorites = [...this.state.favorites, card];
     }
 
     this.setState({
@@ -66,7 +66,7 @@ class App extends Component {
       <div className="App">
         <header className='header'>
           <Link to='/'>
-            <img className="logo" src={logo}/>
+            <img className="logo" src={logo} alt='logo'/>
           </Link>
         </header>
         <Route exact path='/' render={(() => {

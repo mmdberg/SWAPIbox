@@ -2,7 +2,11 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 100px;
+  height: 200px;
+  background: url('../../darth-vader.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 -50px
 }
 
 .button {

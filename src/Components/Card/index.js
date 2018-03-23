@@ -7,8 +7,6 @@ export const Card = (props) => {
     event.target.closest('div').classList.toggle('favorite');
   };
 
-
-
   if (props.information.homeworld) {
     return (
       <div className={props.className} onClick={(event) => 

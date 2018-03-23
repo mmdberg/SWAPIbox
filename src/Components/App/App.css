@@ -8,14 +8,15 @@
 .header {
   background-color: black;
   position: relative;
-  height: 170px;
+  height: 110px;
 }
 
 .logo {
   position: absolute;
-  top: 50%;
+  top: 5px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0);
+  height: 110px;
 }
 
 main {
