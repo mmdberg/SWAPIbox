@@ -20,6 +20,10 @@
 /*  filter: blur(1px)*/
 }
 
+.button:hover {
+  border: yellow 7px solid;
+}
+
 .active {
   background-color: aqua;
 }

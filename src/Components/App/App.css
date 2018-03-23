@@ -1,11 +1,11 @@
 .App {
-
+  background-color: black
 }
 
 .header {
   background-color: black;
   position: relative;
-  height: 110px;
+  height: 115px;
 }
 
 .logo {
@@ -27,5 +27,6 @@ main {
   right: 20px;
   top: -95px;
   color: white;
+  background-color: black;
 }
 

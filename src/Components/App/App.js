@@ -3,8 +3,9 @@ import './App.css';
 import { Scroll } from '../Scroll/index';
 import { ButtonContainer } from '../ButtonContainer/index';
 import { CardContainer } from '../CardContainer/index';
-import { Route, Link, NavLink } from 'react-router-dom';
-import logo from '../../swapi-box-title.png'
+import { Route, Link } from 'react-router-dom';
+import logo from '../../swapi-box-title.png';
+// import createBrowserHistory from 'history'
 
 class App extends Component {
   constructor(props) {
@@ -77,12 +78,12 @@ class App extends Component {
         <Route path='/home/' render={() => {
           return (
             <main>
-              <NavLink to='/favorites' className='changeMain'>
+              <Link to='/favorites' className='changeMain'>
                 FAVORITES:  
                 {this.state.favorites.length ? 
                   this.state.favorites.length : 
                   '(Zero Saved)'}
-              </NavLink>
+              </Link>
               <ButtonContainer getCards={this.getCards}/>
               <CardContainer cards={this.state.cards} 
                 favorites={this.state.favorites} 
@@ -90,13 +91,13 @@ class App extends Component {
             </main>
           );
         }} />
-        <Route exact path='/favorites' render={() => {
+        <Route exact path='/favorites' render={({history}) => {
           return (
             <main>
-              <NavLink to='/home/' 
+              <button onClick={history.goBack} 
                 className='changeMain'>
                 BACK TO ALL CARDS
-              </NavLink>
+              </button>
               <CardContainer cards={this.state.favorites} 
                 favorites={this.state.favorites} 
                 changeFavorites={this.handleFavorites}/>
