@@ -1,7 +1,15 @@
+.welcome {
+  background-color: black;
+  position: relative;
+  height: 500px;
+}
+
 .scroll {
   overflow: hidden;
   position: relative;
   text-align: center;
+  color: white;
+  height: 300px;
 }
 
 .scroll-text {
@@ -10,6 +18,25 @@
   width: 100%;
   transform: translateY(100%);
   animation: scroll 15s linear infinite;
+}
+
+.enter-site {
+  border: yellow 3px solid;
+  background-color: black;
+  text-align: center;
+  text-decoration: none;
+  color: forestgreen;
+  font-size: 30px;
+  padding: 10px;
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.enter-site:hover {
+  color: white;
+  border: magenta 1px dashed;
 }
 
 @keyframes scroll {

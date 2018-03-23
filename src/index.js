@@ -9,7 +9,7 @@ const router = (
   <BrowserRouter>
     <App openingCall={openingCall} buttonCall={buttonCall}/>
   </BrowserRouter>
-)
+);
 
 ReactDOM.render(router, 
   document.getElementById('root'));

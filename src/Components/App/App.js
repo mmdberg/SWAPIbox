@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Scroll } from '../Scroll/index';
-// import { Favorites } from '../Favorites/index';
 import { ButtonContainer } from '../ButtonContainer/index';
 import { CardContainer } from '../CardContainer/index';
 import { Route, Link, NavLink } from 'react-router-dom';
+import logo from '../../swapi-box-title.png'
 
 class App extends Component {
   constructor(props) {
@@ -41,18 +41,20 @@ class App extends Component {
   }
 
   handleFavorites = (card) => {
-    let oldFavorites = [...this.state.favorites]
-    let checkMatch = oldFavorites.filter(favorite => favorite.name === card.name)
+    let oldFavorites = [...this.state.favorites];
+    let checkMatch = 
+      oldFavorites.filter(favorite => favorite.name === card.name);
 
     if (checkMatch.length > 0) {
-      var favorites = oldFavorites.filter(favorite => favorite.name !== card.name)
+      var favorites = 
+      oldFavorites.filter(favorite => favorite.name !== card.name);
     } else {
-      var favorites = [...this.state.favorites, card]
+      var favorites = [...this.state.favorites, card];
     }
 
     this.setState({
       favorites
-    })
+    });
   }
 
   componentDidMount() {
@@ -64,31 +66,43 @@ class App extends Component {
       <div className="App">
         <header className='header'>
           <Link to='/'>
-            <h1 className="logo">SWAPIbox</h1>
+            <img className="logo" src={logo}/>
           </Link>
         </header>
         <Route exact path='/' render={(() => {
-          return(
+          return (
             <Scroll opening={this.state.opening}/>
-          )
-        } )} />
+          );
+        })} />
         <Route path='/home/' render={() => {
           return (
             <main>
-              <NavLink to='/favorites' className='changeMain'>FAVORITES</NavLink>
+              <NavLink to='/favorites' className='changeMain'>
+                FAVORITES 
+                {this.state.favorites.length ? 
+                  this.state.favorites.length : 
+                  '(Zero Saved)'}
+              </NavLink>
               <ButtonContainer getCards={this.getCards}/>
-              <CardContainer cards={this.state.cards} changeFavorites={this.handleFavorites}/>
+              <CardContainer cards={this.state.cards} 
+                favorites={this.state.favorites} 
+                changeFavorites={this.handleFavorites}/>
             </main>
-          )
+          );
         }} />
         <Route exact path='/favorites' render={() => {
-          return(
+          return (
             <main>
-              <NavLink to='/home/' className='changeMain'>BACK TO ALL CARDS</NavLink>
-              <CardContainer cards={this.state.favorites} changeFavorites={this.handleFavorites}/>
+              <NavLink to='/home/' 
+                className='changeMain'>
+                BACK TO ALL CARDS
+              </NavLink>
+              <CardContainer cards={this.state.favorites} 
+                favorites={this.state.favorites} 
+                changeFavorites={this.handleFavorites}/>
             </main>
-          )
-          }} />
+          );
+        }} />
       </div>
     );
   }
