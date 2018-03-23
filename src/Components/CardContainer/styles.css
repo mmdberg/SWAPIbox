@@ -1,0 +1,8 @@
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border: 1px white solid;
+  background: url('../../background.jpg');
+  margin: 10px;
+  height: auto;
+}

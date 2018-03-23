@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Scroll } from '../Scroll/index';
-import { Favorites } from '../Favorites/index';
 import { ButtonContainer } from '../ButtonContainer/index';
 import { CardContainer } from '../CardContainer/index';
+import { Route, Link } from 'react-router-dom';
+import logo from '../../swapi-box-title.png';
+// import createBrowserHistory from 'history'
 
 class App extends Component {
   constructor(props) {
@@ -11,7 +13,8 @@ class App extends Component {
     this.state = {
       opening: {},
       cards: [],
-      errorStatus: ''
+      errorStatus: '',
+      favorites: []
     };
   }
 
@@ -38,20 +41,69 @@ class App extends Component {
     }
   }
 
+  handleFavorites = (card) => {
+    let oldFavorites = [...this.state.favorites];
+    let checkMatch = 
+      oldFavorites.filter(favorite => favorite.name === card.name);
+
+    if (checkMatch.length > 0) {
+      var favorites = 
+      oldFavorites.filter(favorite => favorite.name !== card.name);
+    } else {
+      favorites = [...this.state.favorites, card];
+    }
+
+    this.setState({
+      favorites
+    });
+  }
+
   componentDidMount() {
-    // this.getOpening();
+    this.getOpening();
   }
 
   render() {
     return (
       <div className="App">
         <header className='header'>
-          <h1 className="logo">SWAPIbox</h1>
+          <Link to='/'>
+            <img className="logo" src={logo} alt='logo'/>
+          </Link>
         </header>
-        <Scroll opening={this.state.opening}/>
-        <Favorites />
-        <ButtonContainer getCards={this.getCards}/>
-        <CardContainer cards={this.state.cards}/>
+        <Route exact path='/' render={(() => {
+          return (
+            <Scroll opening={this.state.opening}/>
+          );
+        })} />
+        <Route path='/home/' render={() => {
+          return (
+            <main>
+              <Link to='/favorites' className='changeMain'>
+                FAVORITES:  
+                {this.state.favorites.length ? 
+                  this.state.favorites.length : 
+                  '(Zero Saved)'}
+              </Link>
+              <ButtonContainer getCards={this.getCards}/>
+              <CardContainer cards={this.state.cards} 
+                favorites={this.state.favorites} 
+                changeFavorites={this.handleFavorites}/>
+            </main>
+          );
+        }} />
+        <Route exact path='/favorites' render={({history}) => {
+          return (
+            <main>
+              <button onClick={history.goBack} 
+                className='changeMain'>
+                BACK TO ALL CARDS
+              </button>
+              <CardContainer cards={this.state.favorites} 
+                favorites={this.state.favorites} 
+                changeFavorites={this.handleFavorites}/>
+            </main>
+          );
+        }} />
       </div>
     );
   }
