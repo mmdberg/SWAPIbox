@@ -24,4 +24,6 @@ describe('Card', () => {
 
   })
 
+  //should look different if different card type passed in
+
 })

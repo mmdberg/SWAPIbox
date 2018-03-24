@@ -8,4 +8,6 @@ describe('Button Container', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
+  //test that onclick has been called with right parameters
+
 })

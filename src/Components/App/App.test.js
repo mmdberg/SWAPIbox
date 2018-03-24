@@ -4,8 +4,7 @@ import { shallow } from 'enzyme';
 
 describe('App', () => {
 
-
-  it.skip('matches the snapshot', () => {
+  it('matches the snapshot', () => {
     let wrapper = shallow(<App />);
     expect(wrapper).toMatchSnapshot();
   });
@@ -79,7 +78,36 @@ describe('App', () => {
     expect(wrapper.state('errorStatus')).toEqual(expected);
   });
 
-  //test handle favorites 
-  //should add card to favorites array if it is not already there
-  //should not add card to favorites array if it is already there
+  it('handleFavorites should add card to favorites if not in there', () => {
+    let wrapper = shallow(<App />)
+    let mockCard = {
+      class: "wheeled",
+      model: "Digger Crawler",
+      name: "Sand Crawler",
+      passengers: "30"
+    }
+    wrapper.instance().handleFavorites(mockCard)
+    expect(wrapper.state('favorites')).toEqual([mockCard])
+
+  })
+
+  it('handleFavorites should remove card from favorites if there', () => {
+    let wrapper = shallow(<App />)
+    let mockCard = {
+      class: "wheeled",
+      model: "Digger Crawler",
+      name: "Sand Crawler",
+      passengers: "30"
+    }
+
+    wrapper.setState({
+      favorites: [mockCard]
+    })
+    wrapper.instance().handleFavorites(mockCard)
+    expect(wrapper.state('favorites')).toEqual([])
+
+
+  })
+
+
 });

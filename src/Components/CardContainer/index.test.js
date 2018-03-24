@@ -10,6 +10,7 @@ describe('Card Container', () => {
     }]
 
     let wrapper = shallow(<CardContainer cards={mockCards} favorites={mockCards}/>)
+    expect(wrapper).toMatchSnapshot
   })
 
 
