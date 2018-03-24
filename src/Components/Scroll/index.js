@@ -13,7 +13,9 @@ export const Scroll = ({opening}) => {
           <h3>{opening.releaseYear}</h3>
         </div>
       </div>
-      <Link to={'/home'} className='enter-site'>Enter Site for Star Wars Data</Link>
+      <Link to={'/home'} className='enter-site'>
+        Enter Site for Star Wars Data
+      </Link>
     </div>
   );
 };

@@ -1,0 +1,1249 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should make people card with people data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Unknown
+    changeFavorites={[Function]}
+    information={
+        Object {
+            "homeworld": "ocean",
+            "homeworldPop": "45000000",
+            "name": "R2-D2",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h3
+          className="people-title"
+>
+          R2-D2
+</h3>,
+        <ul>
+          <li>
+                    Species: 
+          </li>
+          <li>
+                    Homeworld: 
+                    ocean
+          </li>
+          <li>
+                    45000000
+          </li>
+</ul>,
+      ],
+      "className": undefined,
+      "onClick": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "R2-D2",
+          "className": "people-title",
+        },
+        "ref": null,
+        "rendered": "R2-D2",
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <li>
+              Species: 
+</li>,
+            <li>
+              Homeworld: 
+              ocean
+</li>,
+            <li>
+              45000000
+</li>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Species: ",
+                undefined,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Species: ",
+              undefined,
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Homeworld: ",
+                "ocean",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Homeworld: ",
+              "ocean",
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "45000000",
+            },
+            "ref": null,
+            "rendered": "45000000",
+            "type": "li",
+          },
+        ],
+        "type": "ul",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h3
+            className="people-title"
+>
+            R2-D2
+</h3>,
+          <ul>
+            <li>
+                        Species: 
+            </li>
+            <li>
+                        Homeworld: 
+                        ocean
+            </li>
+            <li>
+                        45000000
+            </li>
+</ul>,
+        ],
+        "className": undefined,
+        "onClick": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "R2-D2",
+            "className": "people-title",
+          },
+          "ref": null,
+          "rendered": "R2-D2",
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <li>
+                Species: 
+</li>,
+              <li>
+                Homeworld: 
+                ocean
+</li>,
+              <li>
+                45000000
+</li>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Species: ",
+                  undefined,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Species: ",
+                undefined,
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Homeworld: ",
+                  "ocean",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Homeworld: ",
+                "ocean",
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "45000000",
+              },
+              "ref": null,
+              "rendered": "45000000",
+              "type": "li",
+            },
+          ],
+          "type": "ul",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`Card should make planets card with planets data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Unknown
+    changeFavorites={[Function]}
+    information={
+        Object {
+            "name": "Kamino",
+            "residents": Array [
+              "Boba Fett",
+              "Lama Su",
+            ],
+            "terrain": "ocean",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h3
+          className="planets-title"
+>
+          Kamino
+</h3>,
+        <ul>
+          <li>
+                    Terrain: 
+                    ocean
+          </li>
+          <li>
+                    Population: 
+          </li>
+          <li>
+                    Climate: 
+          </li>
+          <li>
+                    Residents:
+                    <ul>
+                              <li>
+                                        Boba Fett
+                              </li>
+                              <li>
+                                        Lama Su
+                              </li>
+                    </ul>
+                     
+          </li>
+</ul>,
+      ],
+      "className": undefined,
+      "onClick": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Kamino",
+          "className": "planets-title",
+        },
+        "ref": null,
+        "rendered": "Kamino",
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <li>
+              Terrain: 
+              ocean
+</li>,
+            <li>
+              Population: 
+</li>,
+            <li>
+              Climate: 
+</li>,
+            <li>
+              Residents:
+              <ul>
+                            <li>
+                                          Boba Fett
+                            </li>
+                            <li>
+                                          Lama Su
+                            </li>
+              </ul>
+               
+</li>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Terrain: ",
+                "ocean",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Terrain: ",
+              "ocean",
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Population: ",
+                undefined,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Population: ",
+              undefined,
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Climate: ",
+                undefined,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Climate: ",
+              undefined,
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Residents:",
+                <ul>
+                  <li>
+                                    Boba Fett
+                  </li>
+                  <li>
+                                    Lama Su
+                  </li>
+</ul>,
+                " ",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Residents:",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <li>
+                      Boba Fett
+</li>,
+                    <li>
+                      Lama Su
+</li>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": "0",
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Boba Fett",
+                    },
+                    "ref": null,
+                    "rendered": "Boba Fett",
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": "1",
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Lama Su",
+                    },
+                    "ref": null,
+                    "rendered": "Lama Su",
+                    "type": "li",
+                  },
+                ],
+                "type": "ul",
+              },
+              " ",
+            ],
+            "type": "li",
+          },
+        ],
+        "type": "ul",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h3
+            className="planets-title"
+>
+            Kamino
+</h3>,
+          <ul>
+            <li>
+                        Terrain: 
+                        ocean
+            </li>
+            <li>
+                        Population: 
+            </li>
+            <li>
+                        Climate: 
+            </li>
+            <li>
+                        Residents:
+                        <ul>
+                                    <li>
+                                                Boba Fett
+                                    </li>
+                                    <li>
+                                                Lama Su
+                                    </li>
+                        </ul>
+                         
+            </li>
+</ul>,
+        ],
+        "className": undefined,
+        "onClick": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Kamino",
+            "className": "planets-title",
+          },
+          "ref": null,
+          "rendered": "Kamino",
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <li>
+                Terrain: 
+                ocean
+</li>,
+              <li>
+                Population: 
+</li>,
+              <li>
+                Climate: 
+</li>,
+              <li>
+                Residents:
+                <ul>
+                                <li>
+                                                Boba Fett
+                                </li>
+                                <li>
+                                                Lama Su
+                                </li>
+                </ul>
+                 
+</li>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Terrain: ",
+                  "ocean",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Terrain: ",
+                "ocean",
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Population: ",
+                  undefined,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Population: ",
+                undefined,
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Climate: ",
+                  undefined,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Climate: ",
+                undefined,
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Residents:",
+                  <ul>
+                    <li>
+                                        Boba Fett
+                    </li>
+                    <li>
+                                        Lama Su
+                    </li>
+</ul>,
+                  " ",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Residents:",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <li>
+                        Boba Fett
+</li>,
+                      <li>
+                        Lama Su
+</li>,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": "0",
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Boba Fett",
+                      },
+                      "ref": null,
+                      "rendered": "Boba Fett",
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": "1",
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Lama Su",
+                      },
+                      "ref": null,
+                      "rendered": "Lama Su",
+                      "type": "li",
+                    },
+                  ],
+                  "type": "ul",
+                },
+                " ",
+              ],
+              "type": "li",
+            },
+          ],
+          "type": "ul",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`Card should make vehicles card with vehicles data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Unknown
+    changeFavorites={[Function]}
+    information={
+        Object {
+            "class": "wheeled",
+            "name": "Sand Crawler",
+            "passengers": "30",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h3
+          className="vehicles-title"
+>
+          Sand Crawler
+</h3>,
+        <ul>
+          <li>
+                    Model: 
+          </li>
+          <li>
+                    Class: 
+                    wheeled
+          </li>
+          <li>
+                    Passengers: 
+                    30
+          </li>
+</ul>,
+      ],
+      "className": undefined,
+      "onClick": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Sand Crawler",
+          "className": "vehicles-title",
+        },
+        "ref": null,
+        "rendered": "Sand Crawler",
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <li>
+              Model: 
+</li>,
+            <li>
+              Class: 
+              wheeled
+</li>,
+            <li>
+              Passengers: 
+              30
+</li>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Model: ",
+                undefined,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Model: ",
+              undefined,
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Class: ",
+                "wheeled",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Class: ",
+              "wheeled",
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Passengers: ",
+                "30",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Passengers: ",
+              "30",
+            ],
+            "type": "li",
+          },
+        ],
+        "type": "ul",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h3
+            className="vehicles-title"
+>
+            Sand Crawler
+</h3>,
+          <ul>
+            <li>
+                        Model: 
+            </li>
+            <li>
+                        Class: 
+                        wheeled
+            </li>
+            <li>
+                        Passengers: 
+                        30
+            </li>
+</ul>,
+        ],
+        "className": undefined,
+        "onClick": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Sand Crawler",
+            "className": "vehicles-title",
+          },
+          "ref": null,
+          "rendered": "Sand Crawler",
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <li>
+                Model: 
+</li>,
+              <li>
+                Class: 
+                wheeled
+</li>,
+              <li>
+                Passengers: 
+                30
+</li>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Model: ",
+                  undefined,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Model: ",
+                undefined,
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Class: ",
+                  "wheeled",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Class: ",
+                "wheeled",
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Passengers: ",
+                  "30",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Passengers: ",
+                "30",
+              ],
+              "type": "li",
+            },
+          ],
+          "type": "ul",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`Card should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Unknown
+    information={
+        Object {
+            "name": "Alderaan",
+            "residents": Array [
+              "Boba Fett",
+              "Lama Su",
+            ],
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h3
+          className="vehicles-title"
+>
+          Alderaan
+</h3>,
+        <ul>
+          <li>
+                    Model: 
+          </li>
+          <li>
+                    Class: 
+          </li>
+          <li>
+                    Passengers: 
+          </li>
+</ul>,
+      ],
+      "className": undefined,
+      "onClick": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Alderaan",
+          "className": "vehicles-title",
+        },
+        "ref": null,
+        "rendered": "Alderaan",
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <li>
+              Model: 
+</li>,
+            <li>
+              Class: 
+</li>,
+            <li>
+              Passengers: 
+</li>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Model: ",
+                undefined,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Model: ",
+              undefined,
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Class: ",
+                undefined,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Class: ",
+              undefined,
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Passengers: ",
+                undefined,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Passengers: ",
+              undefined,
+            ],
+            "type": "li",
+          },
+        ],
+        "type": "ul",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h3
+            className="vehicles-title"
+>
+            Alderaan
+</h3>,
+          <ul>
+            <li>
+                        Model: 
+            </li>
+            <li>
+                        Class: 
+            </li>
+            <li>
+                        Passengers: 
+            </li>
+</ul>,
+        ],
+        "className": undefined,
+        "onClick": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Alderaan",
+            "className": "vehicles-title",
+          },
+          "ref": null,
+          "rendered": "Alderaan",
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <li>
+                Model: 
+</li>,
+              <li>
+                Class: 
+</li>,
+              <li>
+                Passengers: 
+</li>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Model: ",
+                  undefined,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Model: ",
+                undefined,
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Class: ",
+                  undefined,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Class: ",
+                undefined,
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Passengers: ",
+                  undefined,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Passengers: ",
+                undefined,
+              ],
+              "type": "li",
+            },
+          ],
+          "type": "ul",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

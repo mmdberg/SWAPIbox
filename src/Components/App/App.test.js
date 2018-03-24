@@ -4,8 +4,7 @@ import { shallow } from 'enzyme';
 
 describe('App', () => {
 
-
-  it.skip('matches the snapshot', () => {
+  it('matches the snapshot', () => {
     let wrapper = shallow(<App />);
     expect(wrapper).toMatchSnapshot();
   });
@@ -15,13 +14,14 @@ describe('App', () => {
     let expectedState = {
       opening: {},
       cards: [],
-      errorStatus: ''
+      errorStatus: '',
+      favorites: []
     };
     
     expect(wrapper.state()).toEqual(expectedState);
   });
 
-  it('should update state with film text, title and year', async () => {
+  it('getOpening should update state with text, title and year', async () => {
     let expectedOpening = {
       text: "It is a period of civil war. Rebel spaceships.",
       title: "A New Hope",
@@ -77,4 +77,34 @@ describe('App', () => {
     await wrapper.instance().getCards('vehicles');
     expect(wrapper.state('errorStatus')).toEqual(expected);
   });
+
+  it('handleFavorites should add card to favorites if not in there', () => {
+    let wrapper = shallow(<App />);
+    let mockCard = {
+      class: "wheeled",
+      model: "Digger Crawler",
+      name: "Sand Crawler",
+      passengers: "30"
+    };
+
+    wrapper.instance().handleFavorites(mockCard);
+    expect(wrapper.state('favorites')).toEqual([mockCard]);
+  });
+
+  it('handleFavorites should remove card from favorites if there', () => {
+    let wrapper = shallow(<App />);
+    let mockCard = {
+      class: "wheeled",
+      model: "Digger Crawler",
+      name: "Sand Crawler",
+      passengers: "30"
+    };
+
+    wrapper.setState({
+      favorites: [mockCard]
+    });
+    wrapper.instance().handleFavorites(mockCard);
+    expect(wrapper.state('favorites')).toEqual([]);
+  });
+
 });
