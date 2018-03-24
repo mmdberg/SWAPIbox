@@ -7,12 +7,13 @@ describe('Card Container', () => {
     let mockCards = [{ 
       name: 'Alderaan',
       climate: 'swamp'
-    }]
+    }];
 
-    let wrapper = shallow(<CardContainer cards={mockCards} favorites={mockCards}/>)
-    expect(wrapper).toMatchSnapshot
-  })
+    let wrapper = 
+      shallow(<CardContainer cards={mockCards} favorites={mockCards}/>);
+    expect(wrapper).toMatchSnapshot();
+  });
 
 
 
-})
+});

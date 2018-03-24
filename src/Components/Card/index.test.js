@@ -7,60 +7,65 @@ describe('Card', () => {
     let mockInformation = {
       name: 'Alderaan',
       residents: ['Boba Fett', 'Lama Su']
-    }
-    let wrapper = shallow(<Card information={mockInformation}/>)
-    expect(wrapper).toMatchSnapshot()
-  })
+    };
+    let wrapper = shallow(<Card information={mockInformation}/>);
+    expect(wrapper).toMatchSnapshot();
+  });
 
   it('should call changeFavorites with the right parameters', () => {
     let mockInformation = {
       name: 'Bespin',
       terrain: 'swamp',
       residents: ['Boba Fett', 'Lama Su']
-    }
+    };
     let mockFunction = jest.fn();
-    let wrapper = shallow(<Card information={mockInformation} changeFavorites={mockFunction}/>)
+    let wrapper = shallow(<Card 
+      information={mockInformation} 
+      changeFavorites={mockFunction}/>);
     wrapper.find('div').simulate('click');
-    expect(mockFunction).toHaveBeenCalledWith(mockInformation)
-
-  })
+    expect(mockFunction).toHaveBeenCalledWith(mockInformation);
+  });
 
   it('should make people card with people data', () => {
     let peopleMockInformation = {
       name: 'R2-D2',
       homeworld: 'ocean',
       homeworldPop: '45000000'
-    }
+    };
     let mockFunction = jest.fn();
-    let wrapper = shallow(<Card information={peopleMockInformation} changeFavorites={mockFunction}/>)
+    let wrapper = shallow(<Card 
+      information={peopleMockInformation} 
+      changeFavorites={mockFunction}/>);
     wrapper.find('div').simulate('click');
-    expect(wrapper).toMatchSnapshot()
-  })
+    expect(wrapper).toMatchSnapshot();
+  });
 
   it('should make planets card with planets data', () => {
     let planetsMockInformation = {
       name: 'Kamino',
       terrain: 'ocean',
       residents: ['Boba Fett', 'Lama Su']
-    }
+    };
     let mockFunction = jest.fn();
-    let wrapper = shallow(<Card information={planetsMockInformation} changeFavorites={mockFunction}/>)
+    let wrapper = shallow(<Card 
+      information={planetsMockInformation} 
+      changeFavorites={mockFunction}/>);
     wrapper.find('div').simulate('click');
-    expect(wrapper).toMatchSnapshot()
-  })
+    expect(wrapper).toMatchSnapshot();
+  });
 
   it('should make vehicles card with vehicles data', () => {
     let vehiclesMockInformation = {
       name: 'Sand Crawler',
       class: 'wheeled',
       passengers: '30'
-    }
+    };
     let mockFunction = jest.fn();
-    let wrapper = shallow(<Card information={vehiclesMockInformation} changeFavorites={mockFunction}/>)
+    let wrapper = shallow(<Card 
+      information={vehiclesMockInformation} 
+      changeFavorites={mockFunction}/>);
     wrapper.find('div').simulate('click');
-    expect(wrapper).toMatchSnapshot()
-  })
+    expect(wrapper).toMatchSnapshot();
+  });
 
-
-
-})
+});

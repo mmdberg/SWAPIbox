@@ -21,7 +21,7 @@ describe('App', () => {
     expect(wrapper.state()).toEqual(expectedState);
   });
 
-  it('getOpening should update state with film text, title and year', async () => {
+  it('getOpening should update state with text, title and year', async () => {
     let expectedOpening = {
       text: "It is a period of civil war. Rebel spaceships.",
       title: "A New Hope",
@@ -79,35 +79,32 @@ describe('App', () => {
   });
 
   it('handleFavorites should add card to favorites if not in there', () => {
-    let wrapper = shallow(<App />)
+    let wrapper = shallow(<App />);
     let mockCard = {
       class: "wheeled",
       model: "Digger Crawler",
       name: "Sand Crawler",
       passengers: "30"
-    }
-    wrapper.instance().handleFavorites(mockCard)
-    expect(wrapper.state('favorites')).toEqual([mockCard])
+    };
 
-  })
+    wrapper.instance().handleFavorites(mockCard);
+    expect(wrapper.state('favorites')).toEqual([mockCard]);
+  });
 
   it('handleFavorites should remove card from favorites if there', () => {
-    let wrapper = shallow(<App />)
+    let wrapper = shallow(<App />);
     let mockCard = {
       class: "wheeled",
       model: "Digger Crawler",
       name: "Sand Crawler",
       passengers: "30"
-    }
+    };
 
     wrapper.setState({
       favorites: [mockCard]
-    })
-    wrapper.instance().handleFavorites(mockCard)
-    expect(wrapper.state('favorites')).toEqual([])
-
-
-  })
-
+    });
+    wrapper.instance().handleFavorites(mockCard);
+    expect(wrapper.state('favorites')).toEqual([]);
+  });
 
 });

@@ -69,7 +69,6 @@ describe('api button helpers', () => {
       "name": "Luke Skywalker",
       "species": ["https://swapi.co/api/species/1/"]
     }]};
-
     let beforePlanets = {results: [{
       "climate": "Arid",
       "name": "Tatooine",
@@ -78,7 +77,6 @@ describe('api button helpers', () => {
       "orbital_period": "304",
       "residents": ["https://swapi.co/api/people/1/"]
     }]};
-
     let beforeVehicles = { results: [{
       "cargo_capacity": "50000",
       "crew": "46",
@@ -173,7 +171,7 @@ describe('api button helpers', () => {
     expect(helpers.cleanPeople(before)).toEqual(expected);
   });
 
-  it.skip('should fetch Residents with correct params', async () => {
+  it('should fetch Residents with correct params', async () => {
     let before = [{ climate: 'Arid',
       name: 'Tatooine',
       population: '200000',
@@ -183,7 +181,7 @@ describe('api button helpers', () => {
     let expected = 'https://swapi.co/api/people/1/';
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
       ok: true,
-      json: () => Promise.resolve('https://swapi.co/api/people/1/')
+      json: () => Promise.resolve(before)
     }));
 
     helpers.getResidents(before);
