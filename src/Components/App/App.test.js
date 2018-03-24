@@ -15,13 +15,14 @@ describe('App', () => {
     let expectedState = {
       opening: {},
       cards: [],
-      errorStatus: ''
+      errorStatus: '',
+      favorites: []
     };
     
     expect(wrapper.state()).toEqual(expectedState);
   });
 
-  it('should update state with film text, title and year', async () => {
+  it('getOpening should update state with film text, title and year', async () => {
     let expectedOpening = {
       text: "It is a period of civil war. Rebel spaceships.",
       title: "A New Hope",
@@ -77,4 +78,8 @@ describe('App', () => {
     await wrapper.instance().getCards('vehicles');
     expect(wrapper.state('errorStatus')).toEqual(expected);
   });
+
+  //test handle favorites 
+  //should add card to favorites array if it is not already there
+  //should not add card to favorites array if it is already there
 });

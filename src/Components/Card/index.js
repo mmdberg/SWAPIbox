@@ -3,14 +3,10 @@ import './styles.css';
 
 export const Card = (props) => {
 
-  const addActive = (event) => {
-    event.target.closest('div').classList.toggle('favorite');
-  };
-
   if (props.information.homeworld) {
     return (
-      <div className={props.className} onClick={(event) => 
-      { (props.changeFavorites(props.information)); addActive(event) }}>;
+      <div className={props.className} onClick={() => 
+      props.changeFavorites(props.information)}>
         <h3>{props.information.name}</h3>
         <ul>
           <li>Species: {props.information.species}</li>
@@ -23,8 +19,8 @@ export const Card = (props) => {
     let residents = props.information.residents.map((resident, index) =>  
       <li key={index}>{resident}</li>);
     return (
-      <div className={props.className} onClick={(event) => 
-      {(props.changeFavorites(props.information)); addActive(event)}}>;
+      <div className={props.className} onClick={() => 
+      (props.changeFavorites(props.information))}>
         <h3>{props.information.name}</h3>
         <ul>
           <li>Terrain: {props.information.terrain}</li>
@@ -36,8 +32,8 @@ export const Card = (props) => {
     );
   } else {
     return (
-      <div className={props.className} onClick={(event) => 
-      {(props.changeFavorites(props.information)); addActive(event)}}>;
+      <div className={props.className} onClick={() => 
+      (props.changeFavorites(props.information))}>
         <h3>{props.information.name}</h3>
         <ul>
           <li>Model: {props.information.model}</li>
