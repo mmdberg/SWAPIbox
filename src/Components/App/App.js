@@ -112,7 +112,7 @@ class App extends Component {
 
 App.propTypes = {
   buttonCall: PropTypes.func,
-  openingCall: PropTypes.func,
+  openingCall: PropTypes.func
 };
 
 export default App;

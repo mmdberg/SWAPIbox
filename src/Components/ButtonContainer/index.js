@@ -22,4 +22,4 @@ export const ButtonContainer = ({getCards}) => {
 
 ButtonContainer.propTypes = {
   getCards: PropTypes.func
-}
+};

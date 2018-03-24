@@ -33,4 +33,4 @@ CardContainer.propTypes = {
   cards: PropTypes.array,
   changeFavorites: PropTypes.func,
   favorites: PropTypes.array
-}
+};

@@ -1,6 +1,7 @@
 import React from 'react';
 import './styles.css';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 export const Scroll = ({opening}) => {
 
@@ -18,4 +19,8 @@ export const Scroll = ({opening}) => {
       </Link>
     </div>
   );
+};
+
+Scroll.propTypes = {
+  opening: PropTypes.object
 };

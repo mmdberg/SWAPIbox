@@ -49,4 +49,4 @@ Card.propTypes = {
   information: PropTypes.object,
   changeFavorites: PropTypes.func,
   className: PropTypes.string
-}
+};
