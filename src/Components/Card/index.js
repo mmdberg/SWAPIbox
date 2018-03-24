@@ -7,7 +7,7 @@ export const Card = (props) => {
     return (
       <div className={props.className} onClick={() => 
       props.changeFavorites(props.information)}>
-        <h3>{props.information.name}</h3>
+        <h3 className="people-title">{props.information.name}</h3>
         <ul>
           <li>Species: {props.information.species}</li>
           <li>Homeworld: {props.information.homeworld}</li>
@@ -21,7 +21,7 @@ export const Card = (props) => {
     return (
       <div className={props.className} onClick={() => 
       (props.changeFavorites(props.information))}>
-        <h3>{props.information.name}</h3>
+        <h3 className="planets-title">{props.information.name}</h3>
         <ul>
           <li>Terrain: {props.information.terrain}</li>
           <li>Population: {props.information.population}</li>
@@ -34,7 +34,7 @@ export const Card = (props) => {
     return (
       <div className={props.className} onClick={() => 
       (props.changeFavorites(props.information))}>
-        <h3>{props.information.name}</h3>
+        <h3 className="vehicles-title">{props.information.name}</h3>
         <ul>
           <li>Model: {props.information.model}</li>
           <li>Class: {props.information.class}</li>

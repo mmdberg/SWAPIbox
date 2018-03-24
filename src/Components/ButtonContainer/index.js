@@ -6,20 +6,12 @@ export const ButtonContainer = ({getCards}) => {
 
   return (
     <div className="button-container">
-      <NavLink to='/home/people/' className='button' onClick={() => 
+      <NavLink to='/home/people/' className='button people-button' onClick={() => 
         getCards('people')}>People</NavLink>
-      <NavLink to='/home/planets/' className='button' onClick={() => 
+      <NavLink to='/home/planets/' className='button planets-button' onClick={() => 
         getCards('planets')}>Planets</NavLink>
-      <NavLink to='/home/vehicles/' className='button' onClick={() => 
+      <NavLink to='/home/vehicles/' className='button vehicles-button' onClick={() => 
         getCards('vehicles')}>Vehicles</NavLink>
     </div>
   );
 };
-
-
-
-  // const categories = ['people', 'planets', 'vehicles']
-  // const NavLinks = categories.map((category, index) => {
-  //   return <NavLink to={category} key={index} onClick={() => 
-  //     getCards(category)}>{category.toUpperCase()}</NavLink>
-  //  })

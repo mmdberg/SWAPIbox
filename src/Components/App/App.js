@@ -5,7 +5,6 @@ import { ButtonContainer } from '../ButtonContainer/index';
 import { CardContainer } from '../CardContainer/index';
 import { Route, Link } from 'react-router-dom';
 import logo from '../../swapi-box-title.png';
-// import createBrowserHistory from 'history'
 
 class App extends Component {
   constructor(props) {
@@ -103,7 +102,8 @@ class App extends Component {
                 changeFavorites={this.handleFavorites}/>
             </main>
           );
-        }} />
+        }} 
+        />
       </div>
     );
   }

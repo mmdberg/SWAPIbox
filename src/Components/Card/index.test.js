@@ -14,16 +14,53 @@ describe('Card', () => {
 
   it('should call changeFavorites with the right parameters', () => {
     let mockInformation = {
-      name: 'Alderaan',
+      name: 'Bespin',
+      terrain: 'swamp',
       residents: ['Boba Fett', 'Lama Su']
     }
-    let mockEvent = jest.fn();
-    let wrapper = shallow(<Card information={mockInformation} changeFavorites={mockEvent}/>)
+    let mockFunction = jest.fn();
+    let wrapper = shallow(<Card information={mockInformation} changeFavorites={mockFunction}/>)
     wrapper.find('div').simulate('click');
-    expect(mockEvent).toHaveBeenCalledWith(mockInformation)
+    expect(mockFunction).toHaveBeenCalledWith(mockInformation)
 
   })
 
-  //should look different if different card type passed in
+  it('should make people card with people data', () => {
+    let peopleMockInformation = {
+      name: 'R2-D2',
+      homeworld: 'ocean',
+      homeworldPop: '45000000'
+    }
+    let mockFunction = jest.fn();
+    let wrapper = shallow(<Card information={peopleMockInformation} changeFavorites={mockFunction}/>)
+    wrapper.find('div').simulate('click');
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it('should make planets card with planets data', () => {
+    let planetsMockInformation = {
+      name: 'Kamino',
+      terrain: 'ocean',
+      residents: ['Boba Fett', 'Lama Su']
+    }
+    let mockFunction = jest.fn();
+    let wrapper = shallow(<Card information={planetsMockInformation} changeFavorites={mockFunction}/>)
+    wrapper.find('div').simulate('click');
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it('should make vehicles card with vehicles data', () => {
+    let vehiclesMockInformation = {
+      name: 'Sand Crawler',
+      class: 'wheeled',
+      passengers: '30'
+    }
+    let mockFunction = jest.fn();
+    let wrapper = shallow(<Card information={vehiclesMockInformation} changeFavorites={mockFunction}/>)
+    wrapper.find('div').simulate('click');
+    expect(wrapper).toMatchSnapshot()
+  })
+
+
 
 })
