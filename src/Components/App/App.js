@@ -5,6 +5,7 @@ import { ButtonContainer } from '../ButtonContainer/index';
 import { CardContainer } from '../CardContainer/index';
 import { Route, Link } from 'react-router-dom';
 import logo from '../../swapi-box-title.png';
+import PropTypes from 'prop-types';
 
 class App extends Component {
   constructor(props) {
@@ -108,5 +109,10 @@ class App extends Component {
     );
   }
 }
+
+App.propTypes = {
+  buttonCall: PropTypes.func,
+  openingCall: PropTypes.func,
+};
 
 export default App;

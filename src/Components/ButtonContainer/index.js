@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './styles.css';
+import PropTypes from 'prop-types';
 
 export const ButtonContainer = ({getCards}) => {
 
@@ -18,3 +19,7 @@ export const ButtonContainer = ({getCards}) => {
     </div>
   );
 };
+
+ButtonContainer.propTypes = {
+  getCards: PropTypes.func
+}

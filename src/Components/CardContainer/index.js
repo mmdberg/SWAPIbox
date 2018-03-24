@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card } from '../Card/index';
 import './styles.css';
+import PropTypes from 'prop-types';
 
 export const CardContainer = ({cards, changeFavorites, favorites}) => {
 
@@ -27,3 +28,9 @@ export const CardContainer = ({cards, changeFavorites, favorites}) => {
     </div>
   );
 };
+
+CardContainer.propTypes = {
+  cards: PropTypes.array,
+  changeFavorites: PropTypes.func,
+  favorites: PropTypes.array
+}

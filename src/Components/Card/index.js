@@ -1,8 +1,8 @@
 import React from 'react';
 import './styles.css';
+import PropTypes from 'prop-types';
 
 export const Card = (props) => {
-
   if (props.information.homeworld) {
     return (
       <div className={props.className} onClick={() => 
@@ -44,3 +44,9 @@ export const Card = (props) => {
     );
   }
 };
+
+Card.propTypes = {
+  information: PropTypes.object,
+  changeFavorites: PropTypes.func,
+  className: PropTypes.string
+}
