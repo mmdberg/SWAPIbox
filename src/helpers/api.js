@@ -71,12 +71,13 @@ const cleanPeople = (PeopleData) => {
 };
 
 const getResidents = (PlanetData) => {
-  let planetPromises = PlanetData.map(async planet => {
-    let residentPromises = planet.residents.map(async residentURL => {
+  let planetPromises = PlanetData.map( async planet => {
+    let residentPromises = planet.residents.map( async (residentURL) => {
       let response = await fetch(residentURL);
       let resident = await response.json();
       return await resident.name;
     });
+
     let residentsArr = await Promise.all(residentPromises);
     return await ({...planet, residents: residentsArr});
   });
@@ -122,6 +123,7 @@ export default {
   getHomeworld,
   cleanPeople,
   getResidents,
+  // getResidentName,
   getSpecies,
   cleanPlanets,
   cleanVehicles

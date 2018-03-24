@@ -59,17 +59,30 @@ describe('api film helpers', () => {
 });
 
 describe('api button helpers', () => {
-  it('buttonCall should call fetch with correct params based on input', () => {
-    let expected1 = 'https://swapi.co/api/people/';
-    let expected2 = 'https://swapi.co/api/planets/';
-    let expected3 = 'https://swapi.co/api/vehicles/';
-    let beforePeople = {results: [{
+  it('buttonCall should fetch people when input is people', () => {
+    let expected = 'https://swapi.co/api/people/';
+
+    let before = {results: [{
       "gender": "Male",
       "homeworld": "https://swapi.co/api/planets/1/",
       "name": "Luke Skywalker",
       "species": ["https://swapi.co/api/species/1/"]
     }]};
-    let beforePlanets = {results: [{
+
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+      ok: true,
+      json: () => Promise.resolve(before)
+    }));
+
+    helpers.buttonCall('people');
+    expect(window.fetch).toHaveBeenCalledWith(expected);
+
+  });
+
+  it('buttonCall should fetch planets when input is planets', () => {
+    let expected = 'https://swapi.co/api/planets/';
+
+    let before = {results: [{
       "climate": "Arid",
       "name": "Tatooine",
       "population": "200000",
@@ -77,7 +90,22 @@ describe('api button helpers', () => {
       "orbital_period": "304",
       "residents": ["https://swapi.co/api/people/1/"]
     }]};
-    let beforeVehicles = { results: [{
+
+
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+      ok: true,
+      json: () => Promise.resolve(before)
+    }));
+
+    helpers.buttonCall('planets');
+    expect(window.fetch).toHaveBeenCalledWith(expected);
+
+  });
+
+  it('buttonCall should fetch vehicles when input is vehicles', () => {
+
+    let expected = 'https://swapi.co/api/vehicles/';
+    let before = { results: [{
       "cargo_capacity": "50000",
       "crew": "46",
       "model": "Digger Crawler",
@@ -85,30 +113,12 @@ describe('api button helpers', () => {
       "passengers": "30",
       "vehicle_class": "wheeled"
     }]};
-
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
       ok: true,
-      json: () => Promise.resolve(beforePeople)
+      json: () => Promise.resolve(before)
     }));
-
-    helpers.buttonCall('people');
-    expect(window.fetch).toHaveBeenCalledWith(expected1);
-
-    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
-      ok: true,
-      json: () => Promise.resolve(beforePlanets)
-    }));
-
-    helpers.buttonCall('planets');
-    expect(window.fetch).toHaveBeenCalledWith(expected2);
-
-    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
-      ok: true,
-      json: () => Promise.resolve(beforeVehicles)
-    }));
-
     helpers.buttonCall('vehicles');
-    expect(window.fetch).toHaveBeenCalledWith(expected3);
+    expect(window.fetch).toHaveBeenCalledWith(expected);
 
   });
 
@@ -171,13 +181,14 @@ describe('api button helpers', () => {
     expect(helpers.cleanPeople(before)).toEqual(expected);
   });
 
-  it('should fetch Residents with correct params', async () => {
+  it('should fetch Residents with correct params', () => {
     let before = [{ climate: 'Arid',
       name: 'Tatooine',
       population: '200000',
       terrain: 'Dessert',
       residents: ['https://swapi.co/api/people/1/'] 
     }];
+
     let expected = 'https://swapi.co/api/people/1/';
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
       ok: true,
@@ -185,7 +196,7 @@ describe('api button helpers', () => {
     }));
 
     helpers.getResidents(before);
-    await expect(window.fetch).resolves.toHaveBeenCalledWith(expected);
+    expect(window.fetch).toHaveBeenCalledWith(expected);
   });
 
 
