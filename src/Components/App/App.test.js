@@ -107,4 +107,24 @@ describe('App', () => {
     expect(wrapper.state('favorites')).toEqual([]);
   });
 
+  it('clearCards should reset cards and favorites in state', () => {
+    let wrapper = shallow(<App />);
+    let mockCard = {
+      class: "wheeled",
+      model: "Digger Crawler",
+      name: "Sand Crawler",
+      passengers: "30"
+    };
+
+    wrapper.setState({
+      cards: mockCard,
+      favorites: mockCard
+    })
+
+    wrapper.instance().clearCards()
+    expect(wrapper.state('cards')).toEqual([])
+    expect(wrapper.state('favorites')).toEqual([])
+
+  })
+
 });

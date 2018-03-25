@@ -1010,22 +1010,39 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h3
-          className="vehicles-title"
+        <div
+          className="show"
 >
-          Alderaan
-</h3>,
-        <ul>
-          <li>
-                    Model: 
-          </li>
-          <li>
-                    Class: 
-          </li>
-          <li>
-                    Passengers: 
-          </li>
-</ul>,
+          <img
+                    alt=""
+                    src={undefined}
+          />
+          <h3
+                    className="vehicles-title"
+          >
+                    Alderaan
+          </h3>
+</div>,
+        <div
+          className="hide"
+>
+          <h3
+                    className="vehicles-title"
+          >
+                    Alderaan
+          </h3>
+          <ul>
+                    <li>
+                              Model: 
+                    </li>
+                    <li>
+                              Class: 
+                    </li>
+                    <li>
+                              Passengers: 
+                    </li>
+          </ul>
+</div>,
       ],
       "className": undefined,
       "onClick": [Function],
@@ -1037,29 +1054,18 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Alderaan",
-          "className": "vehicles-title",
-        },
-        "ref": null,
-        "rendered": "Alderaan",
-        "type": "h3",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
           "children": Array [
-            <li>
-              Model: 
-</li>,
-            <li>
-              Class: 
-</li>,
-            <li>
-              Passengers: 
-</li>,
+            <img
+              alt=""
+              src={undefined}
+/>,
+            <h3
+              className="vehicles-title"
+>
+              Alderaan
+</h3>,
           ],
+          "className": "show",
         },
         "ref": null,
         "rendered": Array [
@@ -1068,54 +1074,142 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": Array [
-                "Model: ",
-                undefined,
-              ],
+              "alt": "",
+              "src": undefined,
             },
             "ref": null,
-            "rendered": Array [
-              "Model: ",
-              undefined,
-            ],
-            "type": "li",
+            "rendered": null,
+            "type": "img",
           },
           Object {
             "instance": null,
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": Array [
-                "Class: ",
-                undefined,
-              ],
+              "children": "Alderaan",
+              "className": "vehicles-title",
             },
             "ref": null,
-            "rendered": Array [
-              "Class: ",
-              undefined,
-            ],
-            "type": "li",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                "Passengers: ",
-                undefined,
-              ],
-            },
-            "ref": null,
-            "rendered": Array [
-              "Passengers: ",
-              undefined,
-            ],
-            "type": "li",
+            "rendered": "Alderaan",
+            "type": "h3",
           },
         ],
-        "type": "ul",
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h3
+              className="vehicles-title"
+>
+              Alderaan
+</h3>,
+            <ul>
+              <li>
+                            Model: 
+              </li>
+              <li>
+                            Class: 
+              </li>
+              <li>
+                            Passengers: 
+              </li>
+</ul>,
+          ],
+          "className": "hide",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Alderaan",
+              "className": "vehicles-title",
+            },
+            "ref": null,
+            "rendered": "Alderaan",
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <li>
+                  Model: 
+</li>,
+                <li>
+                  Class: 
+</li>,
+                <li>
+                  Passengers: 
+</li>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Model: ",
+                    undefined,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Model: ",
+                  undefined,
+                ],
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Class: ",
+                    undefined,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Class: ",
+                  undefined,
+                ],
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Passengers: ",
+                    undefined,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Passengers: ",
+                  undefined,
+                ],
+                "type": "li",
+              },
+            ],
+            "type": "ul",
+          },
+        ],
+        "type": "div",
       },
     ],
     "type": "div",
@@ -1127,22 +1221,39 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h3
-            className="vehicles-title"
+          <div
+            className="show"
 >
-            Alderaan
-</h3>,
-          <ul>
-            <li>
-                        Model: 
-            </li>
-            <li>
-                        Class: 
-            </li>
-            <li>
-                        Passengers: 
-            </li>
-</ul>,
+            <img
+                        alt=""
+                        src={undefined}
+            />
+            <h3
+                        className="vehicles-title"
+            >
+                        Alderaan
+            </h3>
+</div>,
+          <div
+            className="hide"
+>
+            <h3
+                        className="vehicles-title"
+            >
+                        Alderaan
+            </h3>
+            <ul>
+                        <li>
+                                    Model: 
+                        </li>
+                        <li>
+                                    Class: 
+                        </li>
+                        <li>
+                                    Passengers: 
+                        </li>
+            </ul>
+</div>,
         ],
         "className": undefined,
         "onClick": [Function],
@@ -1154,29 +1265,18 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Alderaan",
-            "className": "vehicles-title",
-          },
-          "ref": null,
-          "rendered": "Alderaan",
-          "type": "h3",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
             "children": Array [
-              <li>
-                Model: 
-</li>,
-              <li>
-                Class: 
-</li>,
-              <li>
-                Passengers: 
-</li>,
+              <img
+                alt=""
+                src={undefined}
+/>,
+              <h3
+                className="vehicles-title"
+>
+                Alderaan
+</h3>,
             ],
+            "className": "show",
           },
           "ref": null,
           "rendered": Array [
@@ -1185,54 +1285,142 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": Array [
-                  "Model: ",
-                  undefined,
-                ],
+                "alt": "",
+                "src": undefined,
               },
               "ref": null,
-              "rendered": Array [
-                "Model: ",
-                undefined,
-              ],
-              "type": "li",
+              "rendered": null,
+              "type": "img",
             },
             Object {
               "instance": null,
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": Array [
-                  "Class: ",
-                  undefined,
-                ],
+                "children": "Alderaan",
+                "className": "vehicles-title",
               },
               "ref": null,
-              "rendered": Array [
-                "Class: ",
-                undefined,
-              ],
-              "type": "li",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  "Passengers: ",
-                  undefined,
-                ],
-              },
-              "ref": null,
-              "rendered": Array [
-                "Passengers: ",
-                undefined,
-              ],
-              "type": "li",
+              "rendered": "Alderaan",
+              "type": "h3",
             },
           ],
-          "type": "ul",
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h3
+                className="vehicles-title"
+>
+                Alderaan
+</h3>,
+              <ul>
+                <li>
+                                Model: 
+                </li>
+                <li>
+                                Class: 
+                </li>
+                <li>
+                                Passengers: 
+                </li>
+</ul>,
+            ],
+            "className": "hide",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Alderaan",
+                "className": "vehicles-title",
+              },
+              "ref": null,
+              "rendered": "Alderaan",
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <li>
+                    Model: 
+</li>,
+                  <li>
+                    Class: 
+</li>,
+                  <li>
+                    Passengers: 
+</li>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "Model: ",
+                      undefined,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Model: ",
+                    undefined,
+                  ],
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "Class: ",
+                      undefined,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Class: ",
+                    undefined,
+                  ],
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "Passengers: ",
+                      undefined,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Passengers: ",
+                    undefined,
+                  ],
+                  "type": "li",
+                },
+              ],
+              "type": "ul",
+            },
+          ],
+          "type": "div",
         },
       ],
       "type": "div",

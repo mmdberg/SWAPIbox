@@ -1,12 +1,18 @@
 import React from 'react';
 import './styles.css';
 import PropTypes from 'prop-types';
+import { planetImages, peopleImages, vehicleImages } from '../../helpers/card-images'
 
 export const Card = (props) => {
   if (props.information.homeworld) {
     return (
       <div className={props.className} onClick={() => 
         props.changeFavorites(props.information)}>
+        <div className="show">
+          <img src={peopleImages[props.information.name]} alt=""/>
+          <h3 className="people-title">{props.information.name}</h3>
+
+        </div>
         <h3 className="people-title">{props.information.name}</h3>
         <ul>
           <li>Species: {props.information.species}</li>
@@ -17,29 +23,43 @@ export const Card = (props) => {
     );
   } else if (props.information.terrain) {
     let residents = props.information.residents.map((resident, index) =>  
-      <li key={index}>{resident}</li>);
+      <li key={index} className="long-list">{resident}</li>);
     return (
       <div className={props.className} onClick={() => 
         (props.changeFavorites(props.information))}>
-        <h3 className="planets-title">{props.information.name}</h3>
-        <ul>
-          <li>Terrain: {props.information.terrain}</li>
-          <li>Population: {props.information.population}</li>
-          <li>Climate: {props.information.climate}</li>
-          <li>Residents:<ul>{residents}</ul> </li>
-        </ul>
+        <div className="show">
+          <img src={planetImages[props.information.name]} alt=""/>
+          <h3 className="planets-title">{props.information.name}</h3>
+        </div>
+        <div className="hide">
+          <h3 className="planets-title">{props.information.name}</h3>
+          <ul>
+            <li>Terrain: {props.information.terrain}</li>
+            <li>Population: {props.information.population}</li>
+            <li>Climate: {props.information.climate}</li>
+            {
+              residents.length > 0 ? <li>Residents:<ul>{residents}</ul> </li> : <li>No Residents</li>
+            }
+          </ul>
+        </div>
       </div>
     );
   } else {
     return (
       <div className={props.className} onClick={() => 
         (props.changeFavorites(props.information))}>
-        <h3 className="vehicles-title">{props.information.name}</h3>
-        <ul>
-          <li>Model: {props.information.model}</li>
-          <li>Class: {props.information.class}</li>
-          <li>Passengers: {props.information.passengers}</li>
-        </ul>
+        <div className="show">
+          <img src={vehicleImages[props.information.name]} alt=""/>
+          <h3 className="vehicles-title">{props.information.name}</h3>
+        </div>
+        <div className="hide">
+          <h3 className="vehicles-title">{props.information.name}</h3>
+          <ul>
+            <li>Model: {props.information.model}</li>
+            <li>Class: {props.information.class}</li>
+            <li>Passengers: {props.information.passengers}</li>
+          </ul>
+        </div>
       </div>
     );
   }

@@ -42,13 +42,16 @@ ShallowWrapper {
                               1977
                     </h3>
           </div>
+          <div
+                    className="fade"
+          />
 </div>,
         <Link
           className="enter-site"
           replace={false}
           to="/home"
 >
-          Enter Site for Star Wars Data
+          Enter for Star Wars Data
 </Link>,
       ],
       "className": "welcome",
@@ -60,139 +63,8 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": <div
-            className="scroll-text"
->
-            <p>
-                        It is a period of civil war. Rebel spaceships.
-            </p>
-            <h3>
-                        A New Hope
-            </h3>
-            <h3>
-                        1977
-            </h3>
-</div>,
-          "className": "scroll",
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <p>
-                It is a period of civil war. Rebel spaceships.
-</p>,
-              <h3>
-                A New Hope
-</h3>,
-              <h3>
-                1977
-</h3>,
-            ],
-            "className": "scroll-text",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "It is a period of civil war. Rebel spaceships.",
-              },
-              "ref": null,
-              "rendered": "It is a period of civil war. Rebel spaceships.",
-              "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "A New Hope",
-              },
-              "ref": null,
-              "rendered": "A New Hope",
-              "type": "h3",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "1977",
-              },
-              "ref": null,
-              "rendered": "1977",
-              "type": "h3",
-            },
-          ],
-          "type": "div",
-        },
-        "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "children": "Enter Site for Star Wars Data",
-          "className": "enter-site",
-          "replace": false,
-          "to": "/home",
-        },
-        "ref": null,
-        "rendered": "Enter Site for Star Wars Data",
-        "type": [Function],
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <div
-            className="scroll"
->
+          "children": Array [
             <div
-                        className="scroll-text"
-            >
-                        <p>
-                                    It is a period of civil war. Rebel spaceships.
-                        </p>
-                        <h3>
-                                    A New Hope
-                        </h3>
-                        <h3>
-                                    1977
-                        </h3>
-            </div>
-</div>,
-          <Link
-            className="enter-site"
-            replace={false}
-            to="/home"
->
-            Enter Site for Star Wars Data
-</Link>,
-        ],
-        "className": "welcome",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": <div
               className="scroll-text"
 >
               <p>
@@ -205,10 +77,15 @@ ShallowWrapper {
                             1977
               </h3>
 </div>,
-            "className": "scroll",
-          },
-          "ref": null,
-          "rendered": Object {
+            <div
+              className="fade"
+/>,
+          ],
+          "className": "scroll",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
             "instance": null,
             "key": undefined,
             "nodeType": "host",
@@ -264,6 +141,171 @@ ShallowWrapper {
             ],
             "type": "div",
           },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "fade",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": "Enter for Star Wars Data",
+          "className": "enter-site",
+          "replace": false,
+          "to": "/home",
+        },
+        "ref": null,
+        "rendered": "Enter for Star Wars Data",
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="scroll"
+>
+            <div
+                        className="scroll-text"
+            >
+                        <p>
+                                    It is a period of civil war. Rebel spaceships.
+                        </p>
+                        <h3>
+                                    A New Hope
+                        </h3>
+                        <h3>
+                                    1977
+                        </h3>
+            </div>
+            <div
+                        className="fade"
+            />
+</div>,
+          <Link
+            className="enter-site"
+            replace={false}
+            to="/home"
+>
+            Enter for Star Wars Data
+</Link>,
+        ],
+        "className": "welcome",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="scroll-text"
+>
+                <p>
+                                It is a period of civil war. Rebel spaceships.
+                </p>
+                <h3>
+                                A New Hope
+                </h3>
+                <h3>
+                                1977
+                </h3>
+</div>,
+              <div
+                className="fade"
+/>,
+            ],
+            "className": "scroll",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p>
+                    It is a period of civil war. Rebel spaceships.
+</p>,
+                  <h3>
+                    A New Hope
+</h3>,
+                  <h3>
+                    1977
+</h3>,
+                ],
+                "className": "scroll-text",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "It is a period of civil war. Rebel spaceships.",
+                  },
+                  "ref": null,
+                  "rendered": "It is a period of civil war. Rebel spaceships.",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "A New Hope",
+                  },
+                  "ref": null,
+                  "rendered": "A New Hope",
+                  "type": "h3",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "1977",
+                  },
+                  "ref": null,
+                  "rendered": "1977",
+                  "type": "h3",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "fade",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+          ],
           "type": "div",
         },
         Object {
@@ -271,13 +313,13 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "children": "Enter Site for Star Wars Data",
+            "children": "Enter for Star Wars Data",
             "className": "enter-site",
             "replace": false,
             "to": "/home",
           },
           "ref": null,
-          "rendered": "Enter Site for Star Wars Data",
+          "rendered": "Enter for Star Wars Data",
           "type": [Function],
         },
       ],

@@ -13,9 +13,10 @@ export const Scroll = ({opening}) => {
           <h3>{opening.title}</h3>
           <h3>{opening.releaseYear}</h3>
         </div>
+        <div className="fade"></div>
       </div>
       <Link to={'/home'} className='enter-site'>
-        Enter Site for Star Wars Data
+        Enter for Star Wars Data
       </Link>
     </div>
   );
