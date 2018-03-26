@@ -19,7 +19,6 @@
   border: yellow 3px solid;
   padding-top: 28px;
   text-decoration: none;
-/*  filter: blur(1px)*/
 }
 
 .button:hover {
@@ -39,9 +38,9 @@
 }
 
 @media screen and (max-width: 750px) {
-.button-container {
-  margin: 0;
-}
+  .button-container {
+    margin: 0;
+  }
 
 }
 

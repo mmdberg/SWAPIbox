@@ -25,7 +25,6 @@
   width: 50%;
 }
 
-
 .vehicle-list li,
 .people-list li {
   font-size: 1em;
@@ -58,9 +57,6 @@
 .card:hover img {
   opacity: .3;
   height: 225px;
-/*  background: linear-gradient(
-                rgba(212, 212, 212, 0.32),
-                rgba(194, 192, 192, 0.5));*/
 }
 
 .hide {
@@ -72,13 +68,8 @@
 .card:hover .hide {
   opacity: 1;
   background: none;
-
 }
 
 .favorite {
-
   background-color: #35bdbd;
-
 }
-
-
