@@ -64,7 +64,6 @@ main h3 {
 
 @media screen and (max-width: 475px) {
 
-
   .card-instructions,
   .button-instructions {
     display: none;

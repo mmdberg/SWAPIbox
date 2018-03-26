@@ -14,6 +14,4 @@ describe('Card Container', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-
-
 });
