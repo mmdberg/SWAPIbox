@@ -5,6 +5,14 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Unknown
+    favorites={
+        Array [
+            Object {
+              "climate": "swamp",
+              "name": "Alderaan",
+            },
+          ]
+    }
     getCards={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -46,6 +54,15 @@ ShallowWrapper {
           to="/home/vehicles/"
 >
           Vehicles
+</NavLink>,
+        <NavLink
+          activeClassName="active"
+          ariaCurrent="true"
+          className="button favorites"
+          to="/favorites/"
+>
+          Favorites: 
+          1
 </NavLink>,
       ],
       "className": "button-container",
@@ -100,6 +117,27 @@ ShallowWrapper {
         "rendered": "Vehicles",
         "type": [Function],
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "activeClassName": "active",
+          "ariaCurrent": "true",
+          "children": Array [
+            "Favorites: ",
+            1,
+          ],
+          "className": "button favorites",
+          "to": "/favorites/",
+        },
+        "ref": null,
+        "rendered": Array [
+          "Favorites: ",
+          1,
+        ],
+        "type": [Function],
+      },
     ],
     "type": "div",
   },
@@ -136,6 +174,15 @@ ShallowWrapper {
             to="/home/vehicles/"
 >
             Vehicles
+</NavLink>,
+          <NavLink
+            activeClassName="active"
+            ariaCurrent="true"
+            className="button favorites"
+            to="/favorites/"
+>
+            Favorites: 
+            1
 </NavLink>,
         ],
         "className": "button-container",
@@ -188,6 +235,27 @@ ShallowWrapper {
           },
           "ref": null,
           "rendered": "Vehicles",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "activeClassName": "active",
+            "ariaCurrent": "true",
+            "children": Array [
+              "Favorites: ",
+              1,
+            ],
+            "className": "button favorites",
+            "to": "/favorites/",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Favorites: ",
+            1,
+          ],
           "type": [Function],
         },
       ],

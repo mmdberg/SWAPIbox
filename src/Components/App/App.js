@@ -5,6 +5,7 @@ import { ButtonContainer } from '../ButtonContainer/index';
 import { CardContainer } from '../CardContainer/index';
 import { Route, Link } from 'react-router-dom';
 import logo from '../../swapi-box-title.png';
+import PropTypes from 'prop-types';
 
 class App extends Component {
   constructor(props) {
@@ -57,6 +58,13 @@ class App extends Component {
     });
   }
 
+  clearCards = () => {
+    this.setState({
+      cards: [],
+      favorites: []
+    });
+  }
+
   componentDidMount() {
     this.getOpening();
   }
@@ -65,7 +73,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className='header'>
-          <Link to='/'>
+          <Link to='/' onClick={() => this.clearCards()}>
             <img className="logo" src={logo} alt='logo'/>
           </Link>
         </header>
@@ -77,29 +85,42 @@ class App extends Component {
         <Route path='/home/' render={() => {
           return (
             <main>
-              <Link to='/favorites' className='changeMain'>
-                FAVORITES:  
-                {this.state.favorites.length ? 
-                  this.state.favorites.length : 
-                  '(Zero Saved)'}
-              </Link>
-              <ButtonContainer getCards={this.getCards}/>
+              <ButtonContainer 
+                getCards={this.getCards} 
+                favorites={this.state.favorites}
+              />
+              {
+                !this.state.cards.length &&
+                <p className="button-instructions">
+                  Choose a category to see cards:
+                </p>
+              }
+              {
+                this.state.cards.length > 0 &&
+                <p className="card-instructions">
+                  Click card to add to favorites
+                </p>
+              }
               <CardContainer cards={this.state.cards} 
                 favorites={this.state.favorites} 
                 changeFavorites={this.handleFavorites}/>
             </main>
           );
         }} />
-        <Route exact path='/favorites' render={({history}) => {
+        <Route exact path='/favorites' render={() => {
           return (
             <main>
-              <button onClick={history.goBack} 
-                className='changeMain'>
-                BACK TO ALL CARDS
-              </button>
+              <ButtonContainer 
+                getCards={this.getCards} 
+                favorites={this.state.favorites}
+              />
               <CardContainer cards={this.state.favorites} 
                 favorites={this.state.favorites} 
                 changeFavorites={this.handleFavorites}/>
+              {
+                !this.state.favorites.length && 
+                <h3>There are no favorites saved.</h3>
+              }
             </main>
           );
         }} 
@@ -108,5 +129,10 @@ class App extends Component {
     );
   }
 }
+
+App.propTypes = {
+  buttonCall: PropTypes.func,
+  openingCall: PropTypes.func
+};
 
 export default App;

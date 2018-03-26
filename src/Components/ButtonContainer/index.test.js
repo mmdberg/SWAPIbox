@@ -6,10 +6,16 @@ describe('Button Container', () => {
 
   let wrapper;
   let mockFunction;
+  let mockCards;
 
   beforeEach(() => {
     mockFunction = jest.fn();
-    wrapper = shallow(<ButtonContainer getCards={mockFunction}/>);
+    mockCards = [{ 
+      name: 'Alderaan',
+      climate: 'swamp'
+    }];
+    wrapper = shallow(<ButtonContainer 
+      getCards={mockFunction} favorites={mockCards}/>);
   });
 
   it('should match snapshot', () => {

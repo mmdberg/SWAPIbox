@@ -1,6 +1,7 @@
 import React from 'react';
 import './styles.css';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 export const Scroll = ({opening}) => {
 
@@ -12,10 +13,15 @@ export const Scroll = ({opening}) => {
           <h3>{opening.title}</h3>
           <h3>{opening.releaseYear}</h3>
         </div>
+        <div className="fade"></div>
       </div>
       <Link to={'/home'} className='enter-site'>
-        Enter Site for Star Wars Data
+        Enter for Star Wars Data
       </Link>
     </div>
   );
+};
+
+Scroll.propTypes = {
+  opening: PropTypes.object
 };

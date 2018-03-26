@@ -6,7 +6,8 @@
   background: url('../../darth-vader.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 0 -50px
+  background-position: 16px -50px;
+  margin: 0 150px;
 }
 
 .button {
@@ -17,20 +18,46 @@
   text-align: center;
   border: yellow 3px solid;
   padding-top: 28px;
+  text-decoration: none;
 /*  filter: blur(1px)*/
 }
 
 .button:hover {
-  border: yellow 7px solid;
+  background: linear-gradient(
+                rgba(212, 212, 212, 0.32),
+                rgba(194, 192, 192, 0.5));
 }
 
 .active {
-  background-color: aqua;
+  background-color: #35bdbd;
+  color: black;
 }
 
-@media screen and (min-width: 700px) {
-.button-container {
-  margin: 0 150px;
+.active:hover {
+  background-color: #35bdbd96 !important;
+  color: black;
 }
+
+@media screen and (max-width: 750px) {
+.button-container {
+  margin: 0;
+}
+
+}
+
+@media screen and (max-width: 475px) {
+  .button-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    justify-items: center;
+    align-items: center;
+    height: 200px;
+  }
+
+  .card-instructions {
+    right: 20px;
+    top: 200px;
+  }
 
 }

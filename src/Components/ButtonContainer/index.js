@@ -1,8 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './styles.css';
+import PropTypes from 'prop-types';
 
-export const ButtonContainer = ({getCards}) => {
+export const ButtonContainer = ({getCards, favorites}) => {
 
   return (
     <div className="button-container">
@@ -15,6 +16,15 @@ export const ButtonContainer = ({getCards}) => {
       <NavLink to='/home/vehicles/' 
         className='button vehicles-button' 
         onClick={() => getCards('vehicles')}>Vehicles</NavLink>
+      <NavLink to='/favorites/' 
+        className='button favorites'>
+        Favorites: {favorites.length}
+      </NavLink>
     </div>
   );
+};
+
+ButtonContainer.propTypes = {
+  getCards: PropTypes.func,
+  favorites: PropTypes.array
 };
