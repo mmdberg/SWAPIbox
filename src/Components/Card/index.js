@@ -1,24 +1,26 @@
 import React from 'react';
 import './styles.css';
 import PropTypes from 'prop-types';
-import { planetImages, peopleImages, vehicleImages } from '../../helpers/card-images'
+import { planetImages, peopleImages, vehicleImages } 
+  from '../../helpers/card-images';
 
 export const Card = (props) => {
   if (props.information.homeworld) {
     return (
       <div className={props.className} onClick={() => 
         props.changeFavorites(props.information)}>
-        <div className="show">
+        <section className="show people-list">
           <img src={peopleImages[props.information.name]} alt=""/>
           <h3 className="people-title">{props.information.name}</h3>
-
-        </div>
-        <h3 className="people-title">{props.information.name}</h3>
-        <ul>
-          <li>Species: {props.information.species}</li>
-          <li>Homeworld: {props.information.homeworld}</li>
-          <li>{props.information.homeworldPop}</li>
-        </ul>
+        </section>
+        <section className="hide people-list">
+          <h3 className="people-title">{props.information.name}</h3>
+          <ul>
+            <li>Species: {props.information.species}</li>
+            <li>Homeworld: {props.information.homeworld}</li>
+            <li>Homeworld Population: {props.information.homeworldPop}</li>
+          </ul>
+        </section>
       </div>
     );
   } else if (props.information.terrain) {
@@ -27,39 +29,41 @@ export const Card = (props) => {
     return (
       <div className={props.className} onClick={() => 
         (props.changeFavorites(props.information))}>
-        <div className="show">
+        <section className="show">
           <img src={planetImages[props.information.name]} alt=""/>
           <h3 className="planets-title">{props.information.name}</h3>
-        </div>
-        <div className="hide">
+        </section>
+        <section className="hide planet-list">
           <h3 className="planets-title">{props.information.name}</h3>
           <ul>
             <li>Terrain: {props.information.terrain}</li>
             <li>Population: {props.information.population}</li>
             <li>Climate: {props.information.climate}</li>
             {
-              residents.length > 0 ? <li>Residents:<ul>{residents}</ul> </li> : <li>No Residents</li>
+              residents.length > 0 ? 
+                <li>Residents:<ul>{residents}</ul> </li> : 
+                <li>No Residents</li>
             }
           </ul>
-        </div>
+        </section>
       </div>
     );
   } else {
     return (
       <div className={props.className} onClick={() => 
         (props.changeFavorites(props.information))}>
-        <div className="show">
+        <section className="show">
           <img src={vehicleImages[props.information.name]} alt=""/>
           <h3 className="vehicles-title">{props.information.name}</h3>
-        </div>
-        <div className="hide">
+        </section>
+        <section className="hide vehicle-list">
           <h3 className="vehicles-title">{props.information.name}</h3>
           <ul>
             <li>Model: {props.information.model}</li>
             <li>Class: {props.information.class}</li>
             <li>Passengers: {props.information.passengers}</li>
           </ul>
-        </div>
+        </section>
       </div>
     );
   }

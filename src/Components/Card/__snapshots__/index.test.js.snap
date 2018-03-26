@@ -27,23 +27,41 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h3
-          className="people-title"
+        <section
+          className="show people-list"
 >
-          R2-D2
-</h3>,
-        <ul>
-          <li>
-                    Species: 
-          </li>
-          <li>
-                    Homeworld: 
-                    ocean
-          </li>
-          <li>
-                    45000000
-          </li>
-</ul>,
+          <img
+                    alt=""
+                    src="r2-d2.jpeg"
+          />
+          <h3
+                    className="people-title"
+          >
+                    R2-D2
+          </h3>
+</section>,
+        <section
+          className="hide people-list"
+>
+          <h3
+                    className="people-title"
+          >
+                    R2-D2
+          </h3>
+          <ul>
+                    <li>
+                              Species: 
+                    </li>
+                    <li>
+                              Homeworld: 
+                              ocean
+                    </li>
+                    <li>
+                              Homeworld Population: 
+                              45000000
+                    </li>
+          </ul>
+</section>,
       ],
       "className": undefined,
       "onClick": [Function],
@@ -55,30 +73,18 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "R2-D2",
-          "className": "people-title",
-        },
-        "ref": null,
-        "rendered": "R2-D2",
-        "type": "h3",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
           "children": Array [
-            <li>
-              Species: 
-</li>,
-            <li>
-              Homeworld: 
-              ocean
-</li>,
-            <li>
-              45000000
-</li>,
+            <img
+              alt=""
+              src="r2-d2.jpeg"
+/>,
+            <h3
+              className="people-title"
+>
+              R2-D2
+</h3>,
           ],
+          "className": "show people-list",
         },
         "ref": null,
         "rendered": Array [
@@ -87,48 +93,146 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": Array [
-                "Species: ",
-                undefined,
-              ],
+              "alt": "",
+              "src": "r2-d2.jpeg",
             },
             "ref": null,
-            "rendered": Array [
-              "Species: ",
-              undefined,
-            ],
-            "type": "li",
+            "rendered": null,
+            "type": "img",
           },
           Object {
             "instance": null,
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": Array [
-                "Homeworld: ",
-                "ocean",
-              ],
+              "children": "R2-D2",
+              "className": "people-title",
             },
             "ref": null,
-            "rendered": Array [
-              "Homeworld: ",
-              "ocean",
-            ],
-            "type": "li",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "45000000",
-            },
-            "ref": null,
-            "rendered": "45000000",
-            "type": "li",
+            "rendered": "R2-D2",
+            "type": "h3",
           },
         ],
-        "type": "ul",
+        "type": "section",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h3
+              className="people-title"
+>
+              R2-D2
+</h3>,
+            <ul>
+              <li>
+                            Species: 
+              </li>
+              <li>
+                            Homeworld: 
+                            ocean
+              </li>
+              <li>
+                            Homeworld Population: 
+                            45000000
+              </li>
+</ul>,
+          ],
+          "className": "hide people-list",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "R2-D2",
+              "className": "people-title",
+            },
+            "ref": null,
+            "rendered": "R2-D2",
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <li>
+                  Species: 
+</li>,
+                <li>
+                  Homeworld: 
+                  ocean
+</li>,
+                <li>
+                  Homeworld Population: 
+                  45000000
+</li>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Species: ",
+                    undefined,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Species: ",
+                  undefined,
+                ],
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Homeworld: ",
+                    "ocean",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Homeworld: ",
+                  "ocean",
+                ],
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Homeworld Population: ",
+                    "45000000",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Homeworld Population: ",
+                  "45000000",
+                ],
+                "type": "li",
+              },
+            ],
+            "type": "ul",
+          },
+        ],
+        "type": "section",
       },
     ],
     "type": "div",
@@ -140,23 +244,41 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h3
-            className="people-title"
+          <section
+            className="show people-list"
 >
-            R2-D2
-</h3>,
-          <ul>
-            <li>
-                        Species: 
-            </li>
-            <li>
-                        Homeworld: 
-                        ocean
-            </li>
-            <li>
-                        45000000
-            </li>
-</ul>,
+            <img
+                        alt=""
+                        src="r2-d2.jpeg"
+            />
+            <h3
+                        className="people-title"
+            >
+                        R2-D2
+            </h3>
+</section>,
+          <section
+            className="hide people-list"
+>
+            <h3
+                        className="people-title"
+            >
+                        R2-D2
+            </h3>
+            <ul>
+                        <li>
+                                    Species: 
+                        </li>
+                        <li>
+                                    Homeworld: 
+                                    ocean
+                        </li>
+                        <li>
+                                    Homeworld Population: 
+                                    45000000
+                        </li>
+            </ul>
+</section>,
         ],
         "className": undefined,
         "onClick": [Function],
@@ -168,30 +290,18 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "R2-D2",
-            "className": "people-title",
-          },
-          "ref": null,
-          "rendered": "R2-D2",
-          "type": "h3",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
             "children": Array [
-              <li>
-                Species: 
-</li>,
-              <li>
-                Homeworld: 
-                ocean
-</li>,
-              <li>
-                45000000
-</li>,
+              <img
+                alt=""
+                src="r2-d2.jpeg"
+/>,
+              <h3
+                className="people-title"
+>
+                R2-D2
+</h3>,
             ],
+            "className": "show people-list",
           },
           "ref": null,
           "rendered": Array [
@@ -200,48 +310,146 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": Array [
-                  "Species: ",
-                  undefined,
-                ],
+                "alt": "",
+                "src": "r2-d2.jpeg",
               },
               "ref": null,
-              "rendered": Array [
-                "Species: ",
-                undefined,
-              ],
-              "type": "li",
+              "rendered": null,
+              "type": "img",
             },
             Object {
               "instance": null,
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": Array [
-                  "Homeworld: ",
-                  "ocean",
-                ],
+                "children": "R2-D2",
+                "className": "people-title",
               },
               "ref": null,
-              "rendered": Array [
-                "Homeworld: ",
-                "ocean",
-              ],
-              "type": "li",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "45000000",
-              },
-              "ref": null,
-              "rendered": "45000000",
-              "type": "li",
+              "rendered": "R2-D2",
+              "type": "h3",
             },
           ],
-          "type": "ul",
+          "type": "section",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h3
+                className="people-title"
+>
+                R2-D2
+</h3>,
+              <ul>
+                <li>
+                                Species: 
+                </li>
+                <li>
+                                Homeworld: 
+                                ocean
+                </li>
+                <li>
+                                Homeworld Population: 
+                                45000000
+                </li>
+</ul>,
+            ],
+            "className": "hide people-list",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "R2-D2",
+                "className": "people-title",
+              },
+              "ref": null,
+              "rendered": "R2-D2",
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <li>
+                    Species: 
+</li>,
+                  <li>
+                    Homeworld: 
+                    ocean
+</li>,
+                  <li>
+                    Homeworld Population: 
+                    45000000
+</li>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "Species: ",
+                      undefined,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Species: ",
+                    undefined,
+                  ],
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "Homeworld: ",
+                      "ocean",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Homeworld: ",
+                    "ocean",
+                  ],
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "Homeworld Population: ",
+                      "45000000",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Homeworld Population: ",
+                    "45000000",
+                  ],
+                  "type": "li",
+                },
+              ],
+              "type": "ul",
+            },
+          ],
+          "type": "section",
         },
       ],
       "type": "div",
@@ -287,35 +495,56 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h3
-          className="planets-title"
+        <section
+          className="show"
 >
-          Kamino
-</h3>,
-        <ul>
-          <li>
-                    Terrain: 
-                    ocean
-          </li>
-          <li>
-                    Population: 
-          </li>
-          <li>
-                    Climate: 
-          </li>
-          <li>
-                    Residents:
-                    <ul>
-                              <li>
-                                        Boba Fett
-                              </li>
-                              <li>
-                                        Lama Su
-                              </li>
-                    </ul>
-                     
-          </li>
-</ul>,
+          <img
+                    alt=""
+                    src="Kamino.jpeg"
+          />
+          <h3
+                    className="planets-title"
+          >
+                    Kamino
+          </h3>
+</section>,
+        <section
+          className="hide planet-list"
+>
+          <h3
+                    className="planets-title"
+          >
+                    Kamino
+          </h3>
+          <ul>
+                    <li>
+                              Terrain: 
+                              ocean
+                    </li>
+                    <li>
+                              Population: 
+                    </li>
+                    <li>
+                              Climate: 
+                    </li>
+                    <li>
+                              Residents:
+                              <ul>
+                                        <li
+                                                  className="long-list"
+                                        >
+                                                  Boba Fett
+                                        </li>
+                                        <li
+                                                  className="long-list"
+                                        >
+                                                  Lama Su
+                                        </li>
+                              </ul>
+                               
+                    </li>
+          </ul>
+</section>,
       ],
       "className": undefined,
       "onClick": [Function],
@@ -327,42 +556,18 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Kamino",
-          "className": "planets-title",
-        },
-        "ref": null,
-        "rendered": "Kamino",
-        "type": "h3",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
           "children": Array [
-            <li>
-              Terrain: 
-              ocean
-</li>,
-            <li>
-              Population: 
-</li>,
-            <li>
-              Climate: 
-</li>,
-            <li>
-              Residents:
-              <ul>
-                            <li>
-                                          Boba Fett
-                            </li>
-                            <li>
-                                          Lama Su
-                            </li>
-              </ul>
-               
-</li>,
+            <img
+              alt=""
+              src="Kamino.jpeg"
+/>,
+            <h3
+              className="planets-title"
+>
+              Kamino
+</h3>,
           ],
+          "className": "show",
         },
         "ref": null,
         "rendered": Array [
@@ -371,120 +576,252 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": Array [
-                "Terrain: ",
-                "ocean",
-              ],
+              "alt": "",
+              "src": "Kamino.jpeg",
             },
             "ref": null,
-            "rendered": Array [
-              "Terrain: ",
-              "ocean",
-            ],
-            "type": "li",
+            "rendered": null,
+            "type": "img",
           },
           Object {
             "instance": null,
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": Array [
-                "Population: ",
-                undefined,
-              ],
+              "children": "Kamino",
+              "className": "planets-title",
             },
             "ref": null,
-            "rendered": Array [
-              "Population: ",
-              undefined,
-            ],
-            "type": "li",
+            "rendered": "Kamino",
+            "type": "h3",
           },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                "Climate: ",
-                undefined,
-              ],
-            },
-            "ref": null,
-            "rendered": Array [
-              "Climate: ",
-              undefined,
-            ],
-            "type": "li",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                "Residents:",
-                <ul>
-                  <li>
-                                    Boba Fett
-                  </li>
-                  <li>
-                                    Lama Su
-                  </li>
+        ],
+        "type": "section",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h3
+              className="planets-title"
+>
+              Kamino
+</h3>,
+            <ul>
+              <li>
+                            Terrain: 
+                            ocean
+              </li>
+              <li>
+                            Population: 
+              </li>
+              <li>
+                            Climate: 
+              </li>
+              <li>
+                            Residents:
+                            <ul>
+                                          <li
+                                                        className="long-list"
+                                          >
+                                                        Boba Fett
+                                          </li>
+                                          <li
+                                                        className="long-list"
+                                          >
+                                                        Lama Su
+                                          </li>
+                            </ul>
+                             
+              </li>
 </ul>,
-                " ",
+          ],
+          "className": "hide planet-list",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Kamino",
+              "className": "planets-title",
+            },
+            "ref": null,
+            "rendered": "Kamino",
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <li>
+                  Terrain: 
+                  ocean
+</li>,
+                <li>
+                  Population: 
+</li>,
+                <li>
+                  Climate: 
+</li>,
+                <li>
+                  Residents:
+                  <ul>
+                                    <li
+                                                      className="long-list"
+                                    >
+                                                      Boba Fett
+                                    </li>
+                                    <li
+                                                      className="long-list"
+                                    >
+                                                      Lama Su
+                                    </li>
+                  </ul>
+                   
+</li>,
               ],
             },
             "ref": null,
             "rendered": Array [
-              "Residents:",
               Object {
                 "instance": null,
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
-                    <li>
-                      Boba Fett
-</li>,
-                    <li>
-                      Lama Su
-</li>,
+                    "Terrain: ",
+                    "ocean",
                   ],
                 },
                 "ref": null,
                 "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": "0",
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "Boba Fett",
-                    },
-                    "ref": null,
-                    "rendered": "Boba Fett",
-                    "type": "li",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": "1",
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "Lama Su",
-                    },
-                    "ref": null,
-                    "rendered": "Lama Su",
-                    "type": "li",
-                  },
+                  "Terrain: ",
+                  "ocean",
                 ],
-                "type": "ul",
+                "type": "li",
               },
-              " ",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Population: ",
+                    undefined,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Population: ",
+                  undefined,
+                ],
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Climate: ",
+                    undefined,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Climate: ",
+                  undefined,
+                ],
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Residents:",
+                    <ul>
+                      <li
+                                            className="long-list"
+                      >
+                                            Boba Fett
+                      </li>
+                      <li
+                                            className="long-list"
+                      >
+                                            Lama Su
+                      </li>
+</ul>,
+                    " ",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Residents:",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <li
+                          className="long-list"
+>
+                          Boba Fett
+</li>,
+                        <li
+                          className="long-list"
+>
+                          Lama Su
+</li>,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": "0",
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Boba Fett",
+                          "className": "long-list",
+                        },
+                        "ref": null,
+                        "rendered": "Boba Fett",
+                        "type": "li",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": "1",
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Lama Su",
+                          "className": "long-list",
+                        },
+                        "ref": null,
+                        "rendered": "Lama Su",
+                        "type": "li",
+                      },
+                    ],
+                    "type": "ul",
+                  },
+                  " ",
+                ],
+                "type": "li",
+              },
             ],
-            "type": "li",
+            "type": "ul",
           },
         ],
-        "type": "ul",
+        "type": "section",
       },
     ],
     "type": "div",
@@ -496,35 +833,56 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h3
-            className="planets-title"
+          <section
+            className="show"
 >
-            Kamino
-</h3>,
-          <ul>
-            <li>
-                        Terrain: 
-                        ocean
-            </li>
-            <li>
-                        Population: 
-            </li>
-            <li>
-                        Climate: 
-            </li>
-            <li>
-                        Residents:
-                        <ul>
-                                    <li>
-                                                Boba Fett
-                                    </li>
-                                    <li>
-                                                Lama Su
-                                    </li>
-                        </ul>
-                         
-            </li>
-</ul>,
+            <img
+                        alt=""
+                        src="Kamino.jpeg"
+            />
+            <h3
+                        className="planets-title"
+            >
+                        Kamino
+            </h3>
+</section>,
+          <section
+            className="hide planet-list"
+>
+            <h3
+                        className="planets-title"
+            >
+                        Kamino
+            </h3>
+            <ul>
+                        <li>
+                                    Terrain: 
+                                    ocean
+                        </li>
+                        <li>
+                                    Population: 
+                        </li>
+                        <li>
+                                    Climate: 
+                        </li>
+                        <li>
+                                    Residents:
+                                    <ul>
+                                                <li
+                                                            className="long-list"
+                                                >
+                                                            Boba Fett
+                                                </li>
+                                                <li
+                                                            className="long-list"
+                                                >
+                                                            Lama Su
+                                                </li>
+                                    </ul>
+                                     
+                        </li>
+            </ul>
+</section>,
         ],
         "className": undefined,
         "onClick": [Function],
@@ -536,42 +894,18 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Kamino",
-            "className": "planets-title",
-          },
-          "ref": null,
-          "rendered": "Kamino",
-          "type": "h3",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
             "children": Array [
-              <li>
-                Terrain: 
-                ocean
-</li>,
-              <li>
-                Population: 
-</li>,
-              <li>
-                Climate: 
-</li>,
-              <li>
-                Residents:
-                <ul>
-                                <li>
-                                                Boba Fett
-                                </li>
-                                <li>
-                                                Lama Su
-                                </li>
-                </ul>
-                 
-</li>,
+              <img
+                alt=""
+                src="Kamino.jpeg"
+/>,
+              <h3
+                className="planets-title"
+>
+                Kamino
+</h3>,
             ],
+            "className": "show",
           },
           "ref": null,
           "rendered": Array [
@@ -580,120 +914,252 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": Array [
-                  "Terrain: ",
-                  "ocean",
-                ],
+                "alt": "",
+                "src": "Kamino.jpeg",
               },
               "ref": null,
-              "rendered": Array [
-                "Terrain: ",
-                "ocean",
-              ],
-              "type": "li",
+              "rendered": null,
+              "type": "img",
             },
             Object {
               "instance": null,
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": Array [
-                  "Population: ",
-                  undefined,
-                ],
+                "children": "Kamino",
+                "className": "planets-title",
               },
               "ref": null,
-              "rendered": Array [
-                "Population: ",
-                undefined,
-              ],
-              "type": "li",
+              "rendered": "Kamino",
+              "type": "h3",
             },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  "Climate: ",
-                  undefined,
-                ],
-              },
-              "ref": null,
-              "rendered": Array [
-                "Climate: ",
-                undefined,
-              ],
-              "type": "li",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  "Residents:",
-                  <ul>
-                    <li>
-                                        Boba Fett
-                    </li>
-                    <li>
-                                        Lama Su
-                    </li>
+          ],
+          "type": "section",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h3
+                className="planets-title"
+>
+                Kamino
+</h3>,
+              <ul>
+                <li>
+                                Terrain: 
+                                ocean
+                </li>
+                <li>
+                                Population: 
+                </li>
+                <li>
+                                Climate: 
+                </li>
+                <li>
+                                Residents:
+                                <ul>
+                                                <li
+                                                                className="long-list"
+                                                >
+                                                                Boba Fett
+                                                </li>
+                                                <li
+                                                                className="long-list"
+                                                >
+                                                                Lama Su
+                                                </li>
+                                </ul>
+                                 
+                </li>
 </ul>,
-                  " ",
+            ],
+            "className": "hide planet-list",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Kamino",
+                "className": "planets-title",
+              },
+              "ref": null,
+              "rendered": "Kamino",
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <li>
+                    Terrain: 
+                    ocean
+</li>,
+                  <li>
+                    Population: 
+</li>,
+                  <li>
+                    Climate: 
+</li>,
+                  <li>
+                    Residents:
+                    <ul>
+                                        <li
+                                                            className="long-list"
+                                        >
+                                                            Boba Fett
+                                        </li>
+                                        <li
+                                                            className="long-list"
+                                        >
+                                                            Lama Su
+                                        </li>
+                    </ul>
+                     
+</li>,
                 ],
               },
               "ref": null,
               "rendered": Array [
-                "Residents:",
                 Object {
                   "instance": null,
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
                     "children": Array [
-                      <li>
-                        Boba Fett
-</li>,
-                      <li>
-                        Lama Su
-</li>,
+                      "Terrain: ",
+                      "ocean",
                     ],
                   },
                   "ref": null,
                   "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": "0",
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "Boba Fett",
-                      },
-                      "ref": null,
-                      "rendered": "Boba Fett",
-                      "type": "li",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": "1",
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "Lama Su",
-                      },
-                      "ref": null,
-                      "rendered": "Lama Su",
-                      "type": "li",
-                    },
+                    "Terrain: ",
+                    "ocean",
                   ],
-                  "type": "ul",
+                  "type": "li",
                 },
-                " ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "Population: ",
+                      undefined,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Population: ",
+                    undefined,
+                  ],
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "Climate: ",
+                      undefined,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Climate: ",
+                    undefined,
+                  ],
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "Residents:",
+                      <ul>
+                        <li
+                                                className="long-list"
+                        >
+                                                Boba Fett
+                        </li>
+                        <li
+                                                className="long-list"
+                        >
+                                                Lama Su
+                        </li>
+</ul>,
+                      " ",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Residents:",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <li
+                            className="long-list"
+>
+                            Boba Fett
+</li>,
+                          <li
+                            className="long-list"
+>
+                            Lama Su
+</li>,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": "0",
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Boba Fett",
+                            "className": "long-list",
+                          },
+                          "ref": null,
+                          "rendered": "Boba Fett",
+                          "type": "li",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": "1",
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Lama Su",
+                            "className": "long-list",
+                          },
+                          "ref": null,
+                          "rendered": "Lama Su",
+                          "type": "li",
+                        },
+                      ],
+                      "type": "ul",
+                    },
+                    " ",
+                  ],
+                  "type": "li",
+                },
               ],
-              "type": "li",
+              "type": "ul",
             },
           ],
-          "type": "ul",
+          "type": "section",
         },
       ],
       "type": "div",
@@ -736,24 +1202,41 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h3
-          className="vehicles-title"
+        <section
+          className="show"
 >
-          Sand Crawler
-</h3>,
-        <ul>
-          <li>
-                    Model: 
-          </li>
-          <li>
-                    Class: 
-                    wheeled
-          </li>
-          <li>
-                    Passengers: 
-                    30
-          </li>
-</ul>,
+          <img
+                    alt=""
+                    src="Sandcrawler.jpeg"
+          />
+          <h3
+                    className="vehicles-title"
+          >
+                    Sand Crawler
+          </h3>
+</section>,
+        <section
+          className="hide vehicle-list"
+>
+          <h3
+                    className="vehicles-title"
+          >
+                    Sand Crawler
+          </h3>
+          <ul>
+                    <li>
+                              Model: 
+                    </li>
+                    <li>
+                              Class: 
+                              wheeled
+                    </li>
+                    <li>
+                              Passengers: 
+                              30
+                    </li>
+          </ul>
+</section>,
       ],
       "className": undefined,
       "onClick": [Function],
@@ -765,31 +1248,18 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Sand Crawler",
-          "className": "vehicles-title",
-        },
-        "ref": null,
-        "rendered": "Sand Crawler",
-        "type": "h3",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
           "children": Array [
-            <li>
-              Model: 
-</li>,
-            <li>
-              Class: 
-              wheeled
-</li>,
-            <li>
-              Passengers: 
-              30
-</li>,
+            <img
+              alt=""
+              src="Sandcrawler.jpeg"
+/>,
+            <h3
+              className="vehicles-title"
+>
+              Sand Crawler
+</h3>,
           ],
+          "className": "show",
         },
         "ref": null,
         "rendered": Array [
@@ -798,54 +1268,146 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": Array [
-                "Model: ",
-                undefined,
-              ],
+              "alt": "",
+              "src": "Sandcrawler.jpeg",
             },
             "ref": null,
-            "rendered": Array [
-              "Model: ",
-              undefined,
-            ],
-            "type": "li",
+            "rendered": null,
+            "type": "img",
           },
           Object {
             "instance": null,
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": Array [
-                "Class: ",
-                "wheeled",
-              ],
+              "children": "Sand Crawler",
+              "className": "vehicles-title",
             },
             "ref": null,
-            "rendered": Array [
-              "Class: ",
-              "wheeled",
-            ],
-            "type": "li",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                "Passengers: ",
-                "30",
-              ],
-            },
-            "ref": null,
-            "rendered": Array [
-              "Passengers: ",
-              "30",
-            ],
-            "type": "li",
+            "rendered": "Sand Crawler",
+            "type": "h3",
           },
         ],
-        "type": "ul",
+        "type": "section",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h3
+              className="vehicles-title"
+>
+              Sand Crawler
+</h3>,
+            <ul>
+              <li>
+                            Model: 
+              </li>
+              <li>
+                            Class: 
+                            wheeled
+              </li>
+              <li>
+                            Passengers: 
+                            30
+              </li>
+</ul>,
+          ],
+          "className": "hide vehicle-list",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Sand Crawler",
+              "className": "vehicles-title",
+            },
+            "ref": null,
+            "rendered": "Sand Crawler",
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <li>
+                  Model: 
+</li>,
+                <li>
+                  Class: 
+                  wheeled
+</li>,
+                <li>
+                  Passengers: 
+                  30
+</li>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Model: ",
+                    undefined,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Model: ",
+                  undefined,
+                ],
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Class: ",
+                    "wheeled",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Class: ",
+                  "wheeled",
+                ],
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Passengers: ",
+                    "30",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Passengers: ",
+                  "30",
+                ],
+                "type": "li",
+              },
+            ],
+            "type": "ul",
+          },
+        ],
+        "type": "section",
       },
     ],
     "type": "div",
@@ -857,24 +1419,41 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h3
-            className="vehicles-title"
+          <section
+            className="show"
 >
-            Sand Crawler
-</h3>,
-          <ul>
-            <li>
-                        Model: 
-            </li>
-            <li>
-                        Class: 
-                        wheeled
-            </li>
-            <li>
-                        Passengers: 
-                        30
-            </li>
-</ul>,
+            <img
+                        alt=""
+                        src="Sandcrawler.jpeg"
+            />
+            <h3
+                        className="vehicles-title"
+            >
+                        Sand Crawler
+            </h3>
+</section>,
+          <section
+            className="hide vehicle-list"
+>
+            <h3
+                        className="vehicles-title"
+            >
+                        Sand Crawler
+            </h3>
+            <ul>
+                        <li>
+                                    Model: 
+                        </li>
+                        <li>
+                                    Class: 
+                                    wheeled
+                        </li>
+                        <li>
+                                    Passengers: 
+                                    30
+                        </li>
+            </ul>
+</section>,
         ],
         "className": undefined,
         "onClick": [Function],
@@ -886,31 +1465,18 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Sand Crawler",
-            "className": "vehicles-title",
-          },
-          "ref": null,
-          "rendered": "Sand Crawler",
-          "type": "h3",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
             "children": Array [
-              <li>
-                Model: 
-</li>,
-              <li>
-                Class: 
-                wheeled
-</li>,
-              <li>
-                Passengers: 
-                30
-</li>,
+              <img
+                alt=""
+                src="Sandcrawler.jpeg"
+/>,
+              <h3
+                className="vehicles-title"
+>
+                Sand Crawler
+</h3>,
             ],
+            "className": "show",
           },
           "ref": null,
           "rendered": Array [
@@ -919,54 +1485,146 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": Array [
-                  "Model: ",
-                  undefined,
-                ],
+                "alt": "",
+                "src": "Sandcrawler.jpeg",
               },
               "ref": null,
-              "rendered": Array [
-                "Model: ",
-                undefined,
-              ],
-              "type": "li",
+              "rendered": null,
+              "type": "img",
             },
             Object {
               "instance": null,
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": Array [
-                  "Class: ",
-                  "wheeled",
-                ],
+                "children": "Sand Crawler",
+                "className": "vehicles-title",
               },
               "ref": null,
-              "rendered": Array [
-                "Class: ",
-                "wheeled",
-              ],
-              "type": "li",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  "Passengers: ",
-                  "30",
-                ],
-              },
-              "ref": null,
-              "rendered": Array [
-                "Passengers: ",
-                "30",
-              ],
-              "type": "li",
+              "rendered": "Sand Crawler",
+              "type": "h3",
             },
           ],
-          "type": "ul",
+          "type": "section",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h3
+                className="vehicles-title"
+>
+                Sand Crawler
+</h3>,
+              <ul>
+                <li>
+                                Model: 
+                </li>
+                <li>
+                                Class: 
+                                wheeled
+                </li>
+                <li>
+                                Passengers: 
+                                30
+                </li>
+</ul>,
+            ],
+            "className": "hide vehicle-list",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Sand Crawler",
+                "className": "vehicles-title",
+              },
+              "ref": null,
+              "rendered": "Sand Crawler",
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <li>
+                    Model: 
+</li>,
+                  <li>
+                    Class: 
+                    wheeled
+</li>,
+                  <li>
+                    Passengers: 
+                    30
+</li>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "Model: ",
+                      undefined,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Model: ",
+                    undefined,
+                  ],
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "Class: ",
+                      "wheeled",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Class: ",
+                    "wheeled",
+                  ],
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "Passengers: ",
+                      "30",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Passengers: ",
+                    "30",
+                  ],
+                  "type": "li",
+                },
+              ],
+              "type": "ul",
+            },
+          ],
+          "type": "section",
         },
       ],
       "type": "div",
@@ -1010,7 +1668,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <div
+        <section
           className="show"
 >
           <img
@@ -1022,9 +1680,9 @@ ShallowWrapper {
           >
                     Alderaan
           </h3>
-</div>,
-        <div
-          className="hide"
+</section>,
+        <section
+          className="hide vehicle-list"
 >
           <h3
                     className="vehicles-title"
@@ -1042,7 +1700,7 @@ ShallowWrapper {
                               Passengers: 
                     </li>
           </ul>
-</div>,
+</section>,
       ],
       "className": undefined,
       "onClick": [Function],
@@ -1094,7 +1752,7 @@ ShallowWrapper {
             "type": "h3",
           },
         ],
-        "type": "div",
+        "type": "section",
       },
       Object {
         "instance": null,
@@ -1119,7 +1777,7 @@ ShallowWrapper {
               </li>
 </ul>,
           ],
-          "className": "hide",
+          "className": "hide vehicle-list",
         },
         "ref": null,
         "rendered": Array [
@@ -1209,7 +1867,7 @@ ShallowWrapper {
             "type": "ul",
           },
         ],
-        "type": "div",
+        "type": "section",
       },
     ],
     "type": "div",
@@ -1221,7 +1879,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <div
+          <section
             className="show"
 >
             <img
@@ -1233,9 +1891,9 @@ ShallowWrapper {
             >
                         Alderaan
             </h3>
-</div>,
-          <div
-            className="hide"
+</section>,
+          <section
+            className="hide vehicle-list"
 >
             <h3
                         className="vehicles-title"
@@ -1253,7 +1911,7 @@ ShallowWrapper {
                                     Passengers: 
                         </li>
             </ul>
-</div>,
+</section>,
         ],
         "className": undefined,
         "onClick": [Function],
@@ -1305,7 +1963,7 @@ ShallowWrapper {
               "type": "h3",
             },
           ],
-          "type": "div",
+          "type": "section",
         },
         Object {
           "instance": null,
@@ -1330,7 +1988,7 @@ ShallowWrapper {
                 </li>
 </ul>,
             ],
-            "className": "hide",
+            "className": "hide vehicle-list",
           },
           "ref": null,
           "rendered": Array [
@@ -1420,7 +2078,7 @@ ShallowWrapper {
               "type": "ul",
             },
           ],
-          "type": "div",
+          "type": "section",
         },
       ],
       "type": "div",

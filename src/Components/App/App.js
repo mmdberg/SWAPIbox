@@ -62,7 +62,7 @@ class App extends Component {
     this.setState({
       cards: [],
       favorites: []
-    })
+    });
   }
 
   componentDidMount() {
@@ -73,7 +73,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className='header'>
-          <Link to='/' onClick={() => {this.clearCards()}}>
+          <Link to='/' onClick={() => this.clearCards()}>
             <img className="logo" src={logo} alt='logo'/>
           </Link>
         </header>
@@ -85,14 +85,21 @@ class App extends Component {
         <Route path='/home/' render={() => {
           return (
             <main>
-              <ButtonContainer getCards={this.getCards} favorites={this.state.favorites}/>
+              <ButtonContainer 
+                getCards={this.getCards} 
+                favorites={this.state.favorites}
+              />
               {
                 !this.state.cards.length &&
-                <p className="button-instructions">Choose a category to see cards:</p>
+                <p className="button-instructions">
+                  Choose a category to see cards:
+                </p>
               }
               {
                 this.state.cards.length > 0 &&
-                <p className="card-instructions">Click card to add to favorites</p>
+                <p className="card-instructions">
+                  Click card to add to favorites
+                </p>
               }
               <CardContainer cards={this.state.cards} 
                 favorites={this.state.favorites} 
@@ -103,7 +110,10 @@ class App extends Component {
         <Route exact path='/favorites' render={() => {
           return (
             <main>
-              <ButtonContainer getCards={this.getCards} favorites={this.state.favorites}/>
+              <ButtonContainer 
+                getCards={this.getCards} 
+                favorites={this.state.favorites}
+              />
               <CardContainer cards={this.state.favorites} 
                 favorites={this.state.favorites} 
                 changeFavorites={this.handleFavorites}/>

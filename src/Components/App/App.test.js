@@ -119,12 +119,12 @@ describe('App', () => {
     wrapper.setState({
       cards: mockCard,
       favorites: mockCard
-    })
+    });
 
-    wrapper.instance().clearCards()
-    expect(wrapper.state('cards')).toEqual([])
-    expect(wrapper.state('favorites')).toEqual([])
+    wrapper.instance().clearCards();
+    expect(wrapper.state('cards')).toEqual([]);
+    expect(wrapper.state('favorites')).toEqual([]);
 
-  })
+  });
 
 });

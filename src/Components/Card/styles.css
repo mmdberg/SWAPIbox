@@ -25,8 +25,14 @@
   width: 50%;
 }
 
-.card li {
-  font-size: .8em;
+
+.vehicle-list li,
+.people-list li {
+  font-size: 1em;
+}
+
+.planet-list li {
+  font-size: .8em
 }
 
 .card ul {
@@ -51,7 +57,7 @@
 
 .card:hover img {
   opacity: .3;
-  height: 230px;
+  height: 225px;
 /*  background: linear-gradient(
                 rgba(212, 212, 212, 0.32),
                 rgba(194, 192, 192, 0.5));*/

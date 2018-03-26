@@ -25,5 +25,6 @@ export const ButtonContainer = ({getCards, favorites}) => {
 };
 
 ButtonContainer.propTypes = {
-  getCards: PropTypes.func
+  getCards: PropTypes.func,
+  favorites: PropTypes.array
 };
